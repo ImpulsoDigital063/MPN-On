@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:meuprimeironegocio.online)",
+      "Bash(npm install:*)",
+      "Bash(npx tsc:*)",
+      "Bash(grep -n \"img\\\\|<img\" /c/Users/DELL/meuprimeironegocio/components/*.tsx)",
+      "Bash(npm run:*)"
+    ]
+  }
+}
