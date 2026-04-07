@@ -32,8 +32,8 @@ export default function Home() {
       <PainPoints />
       <MediaMention />
       <AboutEduardo />
-      <Results />
       <CaseStudy />
+      <Results />
       <Method />
       <BonusGifts />
       <Curriculum />

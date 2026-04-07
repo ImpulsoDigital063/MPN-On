@@ -15,57 +15,78 @@ export default function CaseStudy() {
             <p className="text-emerald-400 font-bold uppercase tracking-widest text-sm mb-4">
               Módulo 2 · Caso Real Gravado
             </p>
-            <h2 className="text-3xl md:text-5xl font-extrabold mb-3">
-              Esse é o método{" "}
-              <span className="text-emerald-400">na prática.</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-3 leading-snug">
+              Esse tipo de negócio está em todo lugar
+              <br />
+              <span className="text-emerald-400">e quase nenhum tem uma loja de verdade</span>
             </h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Todas as 29 aulas do Módulo 2 foram gravadas criando essa loja real — do zero à entrega. Você acompanha cada decisão, cada clique, cada configuração.
-            </p>
           </div>
         </AnimateIn>
 
         <AnimateIn from="bottom" delay={100}>
-        <div className="space-y-5 text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto mb-14">
-          <p>
-            O <strong className="text-white">Gabriel</strong> é dono da{" "}
-            <strong className="text-emerald-400">GB Nutrition</strong> — uma
-            loja de suplementos de Palmas-TO. Ele vendia só pelo Instagram,
-            WhatsApp e boca a boca. Sem loja online. Sem saber o quanto estava
-            deixando dinheiro na mesa.
-          </p>
-          <p>
-            Eu criei a loja dele do zero ao vivo — nova logo, rebranding completo, todos os mecanismos de pagamento e frete configurados.{" "}
-            <strong className="text-white">Cada passo foi gravado e virou aula.</strong>{" "}
-            É exatamente o que você vai assistir no Módulo 2.
-          </p>
-          <p>
-            Hoje o Gabriel oferece{" "}
-            <strong className="text-white">
-              frete expresso via motoboy com entrega no mesmo dia
-            </strong>{" "}
-            para clientes de Palmas. E ainda vende para todo o Brasil com fretes
-            até 80% mais baratos do que levaria direto nos Correios. Tudo
-            funcionando desde o primeiro dia.
-          </p>
-          <p>
-            O nicho aqui é suplementos — mas ao longo das aulas você vai perceber que{" "}
-            <strong className="text-white">o método funciona para qualquer negócio</strong>.
-            Roupas, joias, pet shop, moda fitness, artesanato, cosméticos — o nicho muda, o processo é o mesmo. Você vai ver isso na prática durante o curso.
-          </p>
-          <p>
-            No final, o Gabriel pagou{" "}
-            <strong className="text-emerald-400">R$1.000 via Pix</strong> por
-            uma loja criada em menos de uma semana.
-          </p>
+        <div className="space-y-6 text-gray-300 leading-relaxed max-w-2xl mx-auto mb-14">
+
+          {/* Apresentação */}
+          <div className="space-y-1">
+            <p>O <strong className="text-white">Gabriel</strong> é só um exemplo.</p>
+            <p>
+              Ele já vendia suplementos…<br />
+              mas só pelo Instagram, WhatsApp e indicação.
+            </p>
+          </div>
+
+          {/* Dor */}
+          <div className="border-l-2 border-red-500/40 pl-4 space-y-1">
+            <p className="text-gray-400">Ou seja:</p>
+            <p>vendia…</p>
+            <p className="text-white font-medium">mas deixava dinheiro na mesa todos os dias.</p>
+          </div>
+
+          {/* Solução */}
+          <div className="space-y-1">
+            <p>A gente estruturou uma loja online pra ele.</p>
+            <p>
+              Agora ele vende com entrega no mesmo dia na cidade<br />
+              e também pro Brasil todo.
+            </p>
+          </div>
+
+          {/* Conexão com mercado */}
+          <div className="border-l-2 border-emerald-500/40 pl-4 space-y-1">
+            <p className="text-emerald-400 font-medium">E aqui está o ponto:</p>
+            <p>isso não é só sobre o Gabriel.</p>
+            <p className="text-white">Existem milhares de negócios assim na sua cidade.</p>
+            <p className="text-gray-500">
+              Todos vendendo…<br />
+              mas sem estrutura.
+            </p>
+          </div>
+
+          {/* Monetização */}
+          <div className="space-y-1">
+            <p className="text-white font-medium">E é aqui que entra o dinheiro:</p>
+            <p>
+              você aprende a criar essa loja…<br />
+              e pode cobrar de{" "}
+              <strong className="text-emerald-400">R$600 a R$1.500 por projeto.</strong>
+            </p>
+          </div>
+
+          {/* Curso */}
+          <div className="space-y-1 text-gray-400">
+            <p>E tudo isso foi gravado.</p>
+            <p>Cada passo. Cada decisão.</p>
+            <p className="text-white font-medium">É exatamente o que você vai ver no módulo 2.</p>
+          </div>
+
         </div>
         </AnimateIn>
 
         {/* Gabriel video testimonial */}
         <AnimateIn from="left" delay={80}>
         <div className="w-full max-w-xs mx-auto mb-8">
-          <p className="text-center text-gray-400 text-sm mb-4 uppercase tracking-widest font-bold">
-            Depoimento do Gabriel
+          <p className="text-center text-gray-300 text-base mb-4">
+            Depois da entrega, ele me mandou esse vídeo:
           </p>
           <div
             className="relative rounded-2xl overflow-hidden border border-emerald-500/30 shadow-[0_0_40px_rgba(16,185,129,0.12)]"
@@ -86,8 +107,8 @@ export default function CaseStudy() {
         {/* Pix proof */}
         <AnimateIn from="right" delay={80}>
         <div className="w-full max-w-sm mx-auto mb-12">
-          <p className="text-center text-gray-400 text-sm mb-4 uppercase tracking-widest font-bold">
-            Comprovante de Pagamento
+          <p className="text-center text-gray-300 text-base mb-4">
+            E no final, ele me pagou por isso:
           </p>
           <div className="relative rounded-2xl overflow-hidden border border-emerald-500/30 shadow-[0_0_40px_rgba(16,185,129,0.12)]">
             <Image
@@ -100,6 +121,10 @@ export default function CaseStudy() {
               sizes="(max-width: 640px) 100vw, 384px"
             />
           </div>
+          <p className="text-center mt-4 text-white font-bold text-lg leading-snug">
+            R$1.000 no Pix<br />
+            <span className="text-gray-400 font-normal text-base">por uma loja pronta</span>
+          </p>
         </div>
         </AnimateIn>
 
@@ -112,13 +137,12 @@ export default function CaseStudy() {
               <span className="text-emerald-400">R$1.000 no Pix.</span>
             </p>
           </div>
-          <p className="text-xl md:text-2xl text-gray-300 font-medium">
-            Agora imagina fazer isso{" "}
-            <strong className="text-white">7 vezes por mês.</strong>
-          </p>
-          <p className="text-gray-500 text-base mt-4">
-            É exatamente isso que o método ensina. Veja o que está dentro.
-          </p>
+          <div className="space-y-1">
+            <p className="text-xl text-gray-300 font-medium">Agora pensa…</p>
+            <p className="text-white font-semibold text-lg">
+              quantos negócios iguais ao dele existem perto de você hoje?
+            </p>
+          </div>
         </div>
         </AnimateIn>
       </div>

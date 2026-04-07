@@ -21,22 +21,21 @@ export default function Results() {
         <AnimateIn from="bottom">
         <div className="text-center mb-14">
           <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-4 py-1.5 mb-6">
-            <span className="text-emerald-400 text-xs font-bold uppercase tracking-widest">Resultados Reais · 2º semestre 2025</span>
-          </div>
-          <h2 className="text-3xl md:text-5xl font-extrabold mb-5">
-            É isso que você pode estar{" "}
-            <span className="text-emerald-400">faturando.</span>
-          </h2>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
-            Esses são os dashboards reais da{" "}
-            <strong className="text-emerald-400">UrbanFeet</strong> — minha loja de calçados online, que opera há mais de 3 anos com{" "}
-            <strong className="text-white">dropshipping nacional</strong>. Fornecedor brasileiro, entrega rápida, sem AliExpress, sem produto preso na alfândega.
-          </p>
-          <div className="mt-5 inline-flex items-center gap-3 bg-emerald-500/10 border border-emerald-500/30 rounded-xl px-5 py-3">
             <span className="bg-emerald-500 text-black text-xs font-extrabold px-2 py-0.5 rounded-md">BÔNUS · MÓDULO 3</span>
-            <p className="text-gray-300 text-sm">
-              Você vai aprender a montar exatamente esse modelo — e recebe o contato direto do meu fornecedor.
-            </p>
+            <span className="text-emerald-400 text-xs font-bold uppercase tracking-widest">Resultados Reais · 2025</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-6 leading-snug">
+            E como bônus…{" "}
+            <span className="text-emerald-400">você também aprende a montar sua própria loja</span>
+          </h2>
+          <div className="space-y-3 text-gray-300 max-w-xl mx-auto text-left">
+            <p className="text-white font-medium">Isso aqui já é outro nível.</p>
+            <p>Não é sobre prestar serviço.</p>
+            <p className="text-emerald-400 font-medium">É sobre construir algo seu.</p>
+            <div className="pt-2 border-t border-white/8">
+              <p>Essa é a <strong className="text-white">UrbanFeet</strong>.</p>
+              <p className="text-gray-400">Uma loja que eu trabalho há mais de 3 anos.</p>
+            </div>
           </div>
         </div>
         </AnimateIn>
@@ -122,14 +121,52 @@ export default function Results() {
           *Resultados reais da UrbanFeet. Seu resultado depende da sua dedicação em aplicar o método.
         </p>
 
+        {/* Bônus: explicação + diferenciais */}
+        <AnimateIn from="bottom">
+        <div className="bg-white/[0.03] border border-emerald-500/20 rounded-2xl p-6 md:p-8 mb-6 space-y-6 max-w-2xl mx-auto">
+
+          <div className="space-y-1 text-gray-300">
+            <p>E dentro do módulo 3,{" "}
+              <strong className="text-white">eu recrio essa loja junto com você.</strong>
+            </p>
+            <p className="text-emerald-400 font-medium">Do zero.</p>
+          </div>
+
+          <div className="border-t border-white/8 pt-5 space-y-3">
+            <p className="text-white font-semibold">Você recebe:</p>
+            <ul className="space-y-2 text-gray-300">
+              {[
+                "meu fornecedor de confiança",
+                "mais de 800 mídias prontas",
+                "mais de 100 modelos de calçados",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <span className="text-emerald-400 mt-0.5 flex-shrink-0">✓</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-gray-400 pt-1">
+              O fornecedor cuida do estoque e da logística.
+            </p>
+            <p className="text-white font-medium">Você só precisa focar em vender.</p>
+          </div>
+
+          <div className="border-t border-white/8 pt-5 space-y-3 text-gray-300">
+            <p className="text-gray-500">Isso aqui não é o primeiro passo.</p>
+            <p className="text-white font-bold text-lg">É o próximo nível.</p>
+            <div className="pt-1 space-y-1">
+              <p>Primeiro você aprende a ganhar com serviço.</p>
+              <p className="text-gray-400">Depois, se quiser, constrói algo seu.</p>
+            </div>
+          </div>
+
+        </div>
+        </AnimateIn>
+
         <div className="max-w-sm mx-auto">
           <CTAButton href="#oferta">QUERO APRENDER ESSE MÉTODO</CTAButton>
         </div>
-
-        <p className="text-center text-gray-600 text-sm mt-10">
-          Esses são os meus números. Quer ver o que acontece quando aplico o método para um cliente?{" "}
-          <span className="text-white">↓</span>
-        </p>
       </div>
     </section>
   );

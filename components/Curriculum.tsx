@@ -97,12 +97,12 @@ export default function Curriculum() {
         <AnimateIn from="bottom">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-extrabold mb-4">
-            O Que Você Vai <span className="text-emerald-400">Aprender?</span>
+            O que você vai <span className="text-emerald-400">sair fazendo</span>
           </h2>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            4 módulos completos, do mindset ao faturamento.{" "}
-            <strong className="text-white">+8 horas só no módulo principal</strong> — passo a passo, sem segredos, sem enrolação.
-          </p>
+          <div className="text-lg text-gray-300 max-w-2xl mx-auto space-y-1">
+            <p>Não é só conteúdo.</p>
+            <p className="text-white font-medium">Você acompanha, aplica e sai com isso pronto.</p>
+          </div>
         </div>
         </AnimateIn>
 
@@ -164,10 +164,14 @@ export default function Curriculum() {
                   <span className="bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-xs font-bold px-3 py-1 rounded-full">+8h de conteúdo</span>
                   <span className="bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-xs font-bold px-3 py-1 rounded-full">PDF em cada aula</span>
                 </div>
-                <p className="text-gray-400 mb-5">
-                  Do zero ao site entregue ao cliente. Eu mostro{" "}
-                  <strong className="text-white">cada clique, cada configuração, cada detalhe</strong> que faz uma loja vender de verdade.
-                </p>
+                <div className="text-gray-400 mb-5 space-y-1">
+                  <p>Aqui é onde tudo acontece.</p>
+                  <p>
+                    Você cria uma loja do zero —{" "}
+                    <strong className="text-white">comigo, passo a passo</strong> —
+                  </p>
+                  <p>até chegar no ponto de entregar e cobrar.</p>
+                </div>
                 <div className="space-y-3">
                   {module2Groups.map((group) => {
                     const Icon = group.icon;
@@ -193,11 +197,10 @@ export default function Curriculum() {
                 </div>
                 <div className="mt-4 bg-emerald-500/8 border border-emerald-500/20 rounded-xl p-4 flex items-center gap-3">
                   <Timer className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                  <p className="text-sm text-gray-300">
-                    <strong className="text-emerald-400">Resultado:</strong> Loja profissional completa em{" "}
-                    <strong className="text-white">1 semana</strong>, pronta pra entregar ao cliente e cobrar de{" "}
-                    <strong className="text-white">R$600 a R$1.500</strong>.
-                  </p>
+                  <div className="text-sm text-gray-300 space-y-0.5">
+                    <p>Em até <strong className="text-white">1 semana</strong>, você sai com uma loja pronta</p>
+                    <p>e já pode <strong className="text-emerald-400">cobrar por isso</strong>.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -252,7 +255,11 @@ export default function Curriculum() {
               </div>
               <div>
                 <h3 className="text-2xl font-bold mb-2 text-white">Tráfego Pago e Prospecção: Atraindo Clientes</h3>
-                <p className="text-gray-400 mb-4">De nada adianta saber criar lojas se você não sabe vender o serviço. Aqui você aprende a encontrar e fechar clientes.</p>
+                <div className="text-gray-400 mb-4 space-y-1">
+                  <p>Não adianta saber criar se você não sabe vender.</p>
+                  <p>Aqui você aprende a <strong className="text-white">encontrar clientes</strong></p>
+                  <p>e fechar os primeiros projetos.</p>
+                </div>
                 <div className="grid md:grid-cols-2 gap-3">
                   {["Prospecção de negócios locais", "Scripts de abordagem prontos", "Precificação estratégica", "Fechamento e contrato"].map((item) => (
                     <div key={item} className="flex items-center gap-2 text-sm text-gray-300">
@@ -266,6 +273,14 @@ export default function Curriculum() {
           </div>
           </AnimateIn>
         </div>
+
+        <AnimateIn from="bottom" delay={150}>
+          <div className="text-center mt-12 space-y-1">
+            <p className="text-gray-400 text-lg">Você não precisa saber tudo.</p>
+            <p className="text-gray-300">Só precisa saber fazer isso aqui uma vez…</p>
+            <p className="text-white font-semibold">e repetir.</p>
+          </div>
+        </AnimateIn>
       </div>
     </section>
   );

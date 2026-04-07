@@ -35,14 +35,13 @@ export default function Opportunity() {
             <TrendingUp className="w-4 h-4" />
             <span className="font-bold uppercase tracking-wide text-sm">A Oportunidade é Real</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-extrabold mb-6">
-            Milhões de Negócios Locais{" "}
-            <span className="text-emerald-400">Precisam de Você</span>
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-6 leading-snug">
+            Existe uma oportunidade gigante acontecendo agora —{" "}
+            <span className="text-emerald-400">e quase ninguém está aproveitando</span>
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Agências cobram mais de <strong className="text-white">R$ 2.000</strong> para criar uma loja online.
-            Pequenos empreendedores precisam dessa presença digital mas não têm esse orçamento.{" "}
-            <strong className="text-emerald-400">Você entra nessa lacuna e fatura.</strong>
+            Não é achismo. São dados reais —{" "}
+            <strong className="text-white">e eles mostram exatamente onde está o dinheiro.</strong>
           </p>
         </div>
 
@@ -156,12 +155,19 @@ export default function Opportunity() {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <p className="text-xl md:text-2xl font-bold text-white mb-6">
-            Cada negócio local sem loja online é um cliente esperando por você.
+          <p className="text-lg text-emerald-400 font-semibold mb-8 max-w-2xl mx-auto">
+            Isso significa uma coisa: milhares de negócios estão precisando de alguém que faça isso por eles.
           </p>
-          <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-            Com o MPN-On, você aprende a criar, entregar e cobrar — sem programação, sem investimento alto.
-          </p>
+          <div className="mb-8 space-y-1 max-w-xl mx-auto">
+            <p className="text-xl md:text-2xl font-bold text-white">
+              A oportunidade já está aí.
+            </p>
+            <p className="text-gray-400 text-lg">A diferença é simples:</p>
+            <p className="text-gray-500">ou você continua assistindo…</p>
+            <p className="text-white font-semibold">
+              ou aprende um caminho pra entrar nesse mercado.
+            </p>
+          </div>
           <div className="max-w-sm mx-auto">
             <CTAButton>QUERO FAZER PARTE DESSES NÚMEROS</CTAButton>
           </div>

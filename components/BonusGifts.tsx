@@ -19,7 +19,7 @@ const gifts: Gift[] = [
     tag: "BÔNUS 1",
     title: "Tema Exclusivo MPN-On",
     description:
-      "O mesmo tema que Eduardo usa em todos os projetos da Impulso Digital. Configura 4 opções de frete, botão WhatsApp flutuante e design responsivo pronto pra converter. Sem ele, metade do que você vai aprender não funciona.",
+      "O tema que eu uso em todos os meus projetos. Já vem com 4 opções de frete, botão de WhatsApp e design que converte. Sem ele, metade do que você vai aprender não funciona.",
     value: "R$ 1.000",
     badge: "Incluso no curso",
     color: "amber",
@@ -29,7 +29,7 @@ const gifts: Gift[] = [
     tag: "BÔNUS 2",
     title: "Contato do Fornecedor Nacional",
     description:
-      "O mesmo fornecedor da UrbanFeet. Parceiro de 3 anos. Dropshipping 100% nacional — seu cliente compra, ele entrega. Sem AliExpress, sem espera de 30 dias, sem produto preso na alfândega. Você recebe o contato direto.",
+      "O mesmo fornecedor da UrbanFeet — 3 anos de parceria. Seu cliente compra, ele entrega. Sem AliExpress, sem produto parado na alfândega. Você recebe o contato direto.",
     value: "Acesso exclusivo",
     badge: "Parceiro validado",
     color: "emerald",
@@ -39,7 +39,7 @@ const gifts: Gift[] = [
     tag: "BÔNUS 3",
     title: "29 PDFs de Apoio",
     description:
-      "Um PDF para cada aula do módulo principal. Cada arquivo traz o passo a passo por escrito e todos os links das ferramentas — Shopify, Yampi, Melhor Envio, Mercado Pago. Nunca vai travar por não lembrar de um link ou de um passo.",
+      "Um PDF por aula — com o passo a passo escrito e todos os links das ferramentas. Quando travar, é só abrir e seguir.",
     value: "R$ 197",
     badge: "Um por aula",
     color: "emerald",
@@ -49,7 +49,7 @@ const gifts: Gift[] = [
     tag: "BÔNUS 4",
     title: "Módulo UrbanFeet ao Vivo",
     description:
-      "Eduardo abre a operação inteira da UrbanFeet e recria a loja do zero nas aulas. Você acompanha cada clique, cada decisão, cada configuração — e replica para ter seu próprio e-commerce de calçados gerando renda no automático.",
+      "Eu abro minha loja ao vivo e recrio do zero com você. Cada decisão, cada clique — você acompanha e replica.",
     value: "R$ 1.497",
     badge: "Incluso no curso",
     color: "amber",
@@ -70,12 +70,12 @@ export default function BonusGifts() {
           <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 rounded-full px-4 py-1.5 mb-6">
             <span className="text-amber-400 text-xs font-bold uppercase tracking-widest">Bônus Exclusivos</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-extrabold mb-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4 leading-snug">
             Você não leva só um curso.{" "}
-            <span className="text-amber-400">Leva três presentes.</span>
+            <span className="text-amber-400">Leva tudo o que precisa pra começar.</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Cada bônus foi pensado para eliminar um obstáculo que impede o aluno de começar.
+            Cada bônus foi pensado para tirar um obstáculo do seu caminho.
           </p>
         </div>
         </AnimateIn>
@@ -121,6 +121,11 @@ export default function BonusGifts() {
           })}
         </div>
 
+        <p className="text-center text-gray-300 text-base mb-6">
+          Se você fechar <strong className="text-white">1 cliente…</strong><br />
+          <span className="text-emerald-400 font-semibold">o curso já se paga.</span>
+        </p>
+
         <div className="relative bg-white/[0.03] border border-white/8 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 mb-10 overflow-hidden">
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent" />
           <div>
@@ -136,7 +141,7 @@ export default function BonusGifts() {
         </div>
 
         <div className="max-w-sm mx-auto">
-          <CTAButton href="#oferta">QUERO GARANTIR MEUS BÔNUS</CTAButton>
+          <CTAButton href="#oferta">Quero começar agora</CTAButton>
         </div>
 
         <p className="text-center text-gray-600 text-sm mt-6">

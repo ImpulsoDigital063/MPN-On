@@ -35,27 +35,34 @@ export default function FinalCTA() {
             </div>
           </div>
 
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-5">
-            Risco Zero para Você
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-6">
+            O risco é todo meu
           </h2>
-          <p className="text-lg text-gray-300 mb-4 max-w-2xl mx-auto">
-            Entre, assista às aulas, aplique o método. Se em{" "}
-            <strong className="text-white">7 dias</strong> você achar que não é
-            para você, eu devolvo{" "}
-            <strong className="text-white">100% do seu dinheiro</strong>. Sem
-            perguntas.
-          </p>
-          <p className="text-gray-400 mb-10 max-w-xl mx-auto">
-            O risco é todo meu. Você não tem nada a perder.
-          </p>
+          <div className="text-lg text-gray-300 mb-10 max-w-xl mx-auto space-y-2">
+            <p>Entra, aplica o método.</p>
+            <p>
+              Se em <strong className="text-white">7 dias</strong> não fizer sentido pra você,{" "}
+              eu devolvo <strong className="text-white">100% do seu dinheiro</strong>.
+            </p>
+            <p className="text-gray-400">Sem pergunta.</p>
+            <div className="pt-2 space-y-1 text-gray-500">
+              <p>Você pode testar sem risco.</p>
+              <p>Ou continuar como está.</p>
+            </div>
+          </div>
           </AnimateIn>
 
           <AnimateIn from="bottom" delay={150}>
-          <div className="flex flex-col items-center gap-6">
-            <div className="w-full max-w-sm">
-              <CTAButton>GARANTIR MINHA VAGA AGORA</CTAButton>
+          <div className="flex flex-col items-center gap-4">
+            <div className="space-y-1 mb-2">
+              <p className="text-gray-400 text-lg">Você já viu tudo.</p>
+              <p className="text-white font-bold text-xl">Agora é só decidir.</p>
             </div>
-            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-400">
+            <div className="w-full max-w-sm">
+              <CTAButton>QUERO ENTRAR E FAZER MINHA PRIMEIRA VENDA</CTAButton>
+            </div>
+            <p className="text-gray-500 text-sm">Acesso imediato após o pagamento.</p>
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-400 pt-1">
               <span className="flex items-center gap-1">
                 <Lock className="w-4 h-4" /> Pagamento Seguro
               </span>

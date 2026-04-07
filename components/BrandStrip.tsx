@@ -77,7 +77,7 @@ export default function BrandStrip() {
       <div className="container max-w-5xl mx-auto px-4 relative z-10">
         <AnimateIn from="bottom">
           <p className="text-center text-gray-600 text-xs uppercase tracking-widest font-bold mb-8">
-            Ferramentas que você vai dominar
+            As mesmas ferramentas que você vai usar nos projetos reais
           </p>
         </AnimateIn>
         <div className="grid grid-cols-3 md:grid-cols-6 gap-4">

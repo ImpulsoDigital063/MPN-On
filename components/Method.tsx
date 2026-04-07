@@ -11,14 +11,15 @@ export default function Method() {
         <AnimateIn from="bottom">
           <div className="text-center mb-16">
             <p className="text-emerald-400 font-bold uppercase tracking-widest text-xs mb-4">O Método MPN-On</p>
-            <h2 className="text-3xl md:text-5xl font-extrabold mb-6">
-              Dois Negócios.{" "}
-              <span className="text-emerald-400">Uma Renda Dupla.</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-5 leading-snug">
+              Você não precisa escolher.{" "}
+              <span className="text-emerald-400">Mas precisa começar do jeito certo.</span>
             </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              O MPN-On te ensina a faturar de{" "}
-              <strong className="text-white">duas formas diferentes</strong> ao mesmo tempo. Enquanto cria lojas para clientes e cobra por isso, você também monta seu próprio e-commerce.
-            </p>
+            <div className="space-y-1 text-gray-300 text-lg max-w-xl mx-auto">
+              <p>O MPN-On te ensina dois caminhos.</p>
+              <p>Um pra <strong className="text-white">gerar dinheiro rápido</strong>.</p>
+              <p>Outro pra <strong className="text-emerald-400">construir algo seu</strong>.</p>
+            </div>
           </div>
         </AnimateIn>
 
@@ -31,11 +32,12 @@ export default function Method() {
               <div className="bg-emerald-500/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6 border border-emerald-500/20">
                 <DollarSign className="w-7 h-7 text-emerald-400" />
               </div>
-              <h3 className="text-2xl font-bold mb-3">Crie Lojas para Clientes</h3>
-              <p className="text-gray-400 mb-6 leading-relaxed text-sm">
-                Aprenda a criar lojas Shopify profissionais em até 3 dias e cobre de{" "}
-                <strong className="text-white">R$ 600 a R$ 1.500 por projeto</strong>. Negócios locais estão desesperados por presença online.
-              </p>
+              <h3 className="text-2xl font-bold mb-3">Comece criando lojas para clientes</h3>
+              <div className="text-gray-400 mb-6 leading-relaxed text-sm space-y-1">
+                <p>Em até 3 dias, você já consegue entregar uma loja pronta</p>
+                <p>e cobrar de <strong className="text-white">R$600 a R$1.500 por projeto</strong>.</p>
+                <p className="text-gray-500 pt-1">Negócios locais estão todos os dias precisando disso.</p>
+              </div>
               <div className="space-y-2 mb-8">
                 {["Pet shops, roupas, calçados, suplementos, joias", "Profissionais liberais e produtores artesanais", "Qualquer negócio local sem presença digital"].map((item) => (
                   <div key={item} className="flex items-start gap-2 text-sm text-gray-300">
@@ -59,11 +61,14 @@ export default function Method() {
               <div className="bg-amber-500/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6 border border-amber-500/20">
                 <Package className="w-7 h-7 text-amber-400" />
               </div>
-              <h3 className="text-2xl font-bold mb-3">Sua Loja Própria de Calçados</h3>
-              <p className="text-gray-400 mb-6 leading-relaxed text-sm">
-                Crie seu próprio e-commerce com <strong className="text-white">dropshipping nacional</strong>. Fornecedor brasileiro, entrega rápida.{" "}
-                <strong className="text-amber-400">Sem tocar em nenhuma caixa de sapato.</strong>
-              </p>
+              <h3 className="text-2xl font-bold mb-3">Depois, construa sua própria loja</h3>
+              <div className="text-gray-400 mb-6 leading-relaxed text-sm space-y-1">
+                <p>Aqui entra o bônus.</p>
+                <p>Você aprende a montar um e-commerce de calçados</p>
+                <p>com <strong className="text-white">fornecedor nacional</strong>, entrega rápida</p>
+                <p>e operação praticamente automática.</p>
+                <p className="text-amber-400 font-medium pt-1">Sem estoque. Sem dor de cabeça.</p>
+              </div>
               <div className="space-y-2 mb-8">
                 {["Fornecedor nacional exclusivo", "800+ mídias profissionais inclusas", "Operação 100% automática"].map((item) => (
                   <div key={item} className="flex items-start gap-2 text-sm text-gray-300">
@@ -81,10 +86,10 @@ export default function Method() {
         </div>
 
         <AnimateIn from="bottom" delay={200}>
-          <div className="text-center mt-12">
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Você sabe o que é possível. Agora veja o que você leva para fazer isso acontecer.
-            </p>
+          <div className="text-center mt-12 space-y-1">
+            <p className="text-gray-400 text-lg">Você não começa com dois negócios.</p>
+            <p className="text-gray-300">Você começa com um…</p>
+            <p className="text-white font-semibold">e evolui para o segundo.</p>
           </div>
         </AnimateIn>
       </div>

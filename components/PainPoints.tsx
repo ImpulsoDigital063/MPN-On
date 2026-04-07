@@ -12,26 +12,26 @@ interface Pain {
 const pains: Pain[] = [
   {
     icon: LogOut,
-    title: "Você quer sair do emprego — mas toda ideia de negócio online parece fora do seu alcance",
-    desc: "Parece que todo mundo que fatura no digital tem algum conhecimento que você não tem. Você assiste, pesquisa, tenta entender — e a sensação é sempre a mesma: isso é para os outros.",
+    title: "Você quer sair do emprego — mas tudo no digital parece complicado demais",
+    desc: "Parece que todo mundo sabe algo que você não sabe. Você tenta entender… mas no final, só fica mais confuso.",
     from: "left",
   },
   {
     icon: RefreshCw,
-    title: "Você consome conteúdo de guru há meses e ainda não saiu do lugar",
-    desc: "São cursos, vídeos, podcasts, e-books — e no final do dia você está mais confuso do que antes. A sensação de que está sempre começando e nunca chegando a lugar nenhum.",
+    title: "Você consome conteúdo há meses — mas continua no mesmo lugar",
+    desc: "Vídeos, cursos, dicas… E mesmo assim, nada muda de verdade.",
     from: "right",
   },
   {
     icon: ShieldAlert,
-    title: "Você tem medo de investir em mais uma coisa e não ver retorno",
-    desc: "Já foi queimado antes. Já comprou algo que prometia e não entregou. E agora qualquer investimento parece mais uma armadilha do que uma oportunidade.",
+    title: "Você já tem medo de investir de novo e não ter retorno",
+    desc: "Já foi enganado antes. E hoje qualquer promessa parece mais risco do que oportunidade.",
     from: "left",
   },
   {
     icon: WifiOff,
-    title: "Você não quer depender de seguidores, algoritmo ou tráfego pago para faturar",
-    desc: "Toda estratégia que você encontra exige uma audiência que você não tem ou um orçamento para anúncios que você não quer gastar. Parece que o digital foi feito só para quem já chegou.",
+    title: "Você não quer depender de seguidores ou gastar com anúncios",
+    desc: "Mas parece que todo caminho exige algo que você ainda não tem.",
     from: "right",
   },
 ];
@@ -44,19 +44,13 @@ export default function PainPoints() {
 
       <div className="container max-w-4xl mx-auto text-center px-4">
         <AnimateIn from="bottom">
-          <div className="mb-10">
-            <p className="text-xl md:text-3xl font-extrabold text-white leading-snug max-w-3xl mx-auto">
-              Se você não aguenta mais a vida de{" "}
-              <span className="text-red-400">trabalhar e pagar boletos</span>{" "}
-              — você não está sozinho.
-            </p>
-          </div>
-          <h2 className="text-2xl md:text-4xl font-extrabold mb-4">
-            Você se identifica com{" "}
-            <span className="text-red-400">alguma dessas situações</span>?
+          <h2 className="text-2xl md:text-4xl font-extrabold mb-4 leading-snug max-w-3xl mx-auto">
+            Se você sente que está travado enquanto todo mundo parece estar{" "}
+            <span className="text-red-400">ganhando dinheiro online…</span>{" "}
+            você não está sozinho.
           </h2>
           <p className="text-gray-400 mb-12 max-w-2xl mx-auto">
-            A maioria de quem chega aqui passou por pelo menos uma delas.
+            E provavelmente você já passou por pelo menos uma dessas situações:
           </p>
         </AnimateIn>
 
@@ -85,8 +79,8 @@ export default function PainPoints() {
 
         <AnimateIn from="bottom">
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Se você se identificou com qualquer um desses pontos —{" "}
-            <span className="text-white font-semibold">o mercado digital está esperando por você. E os dados confirmam isso.</span>
+            Se você se viu em pelo menos um desses pontos… então você não precisa de mais informação.{" "}
+            <span className="text-white font-semibold">Você precisa de um caminho simples — que funcione mesmo começando do zero.</span>
           </p>
         </AnimateIn>
       </div>

@@ -21,12 +21,13 @@ export default function Logistics() {
             <span className="font-bold uppercase tracking-wide text-sm">O Pulo do Gato</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-extrabold mb-4">
-            A configuração que separa uma loja{" "}
-            <span className="text-emerald-400">que vende todos os dias</span>
+            O detalhe que faz uma loja{" "}
+            <span className="text-emerald-400">vender… ou não</span>
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            O frete é o maior assassino de conversão no e-commerce. Com o método MPN-On, cada loja que você entrega já sai com isso resolvido.
-          </p>
+          <div className="text-lg text-gray-400 max-w-xl mx-auto space-y-1">
+            <p>A maioria erra aqui.</p>
+            <p className="text-white font-medium">E é por isso que as lojas não vendem.</p>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 items-start">
@@ -38,17 +39,22 @@ export default function Logistics() {
               </div>
               <h3 className="text-xl font-extrabold text-emerald-400">A sacada do frete expresso</h3>
             </div>
-            <div className="space-y-4 text-gray-300 leading-relaxed">
-              <p>
-                Pensa comigo. O cliente mora na mesma cidade do negócio. Ele quer comprar um suplemento, uma roupa, uma joia. No checkout aparece:{" "}
-                <strong className="text-white">"Frete Expresso via Motoboy — Receba Hoje por R$10."</strong>
+            <div className="space-y-3 text-gray-300 leading-relaxed">
+              <p>Pensa comigo.</p>
+              <p>O cliente tá na mesma cidade.</p>
+              <p>Ele vê:</p>
+              <p className="border-l-2 border-emerald-500/50 pl-4 text-white font-medium">
+                "Receba hoje por R$10"
+              </p>
+              <p className="text-gray-500">…ou espera 5 dias.</p>
+              <p className="text-white font-semibold">Qual ele escolhe?</p>
+              <p className="text-emerald-400 font-medium pt-1">
+                Isso aqui sozinho já muda o jogo.
               </p>
               <p>
-                Nenhum grande marketplace consegue fazer isso pela cidade dele.{" "}
-                <strong className="text-emerald-400">Você consegue.</strong>
-              </p>
-              <p className="text-white font-semibold">
-                Essa única configuração eleva a taxa de conversão de 1-2% para 4-5%. Três vezes mais vendas com o mesmo tráfego.
+                Isso pode literalmente{" "}
+                <strong className="text-white">triplicar as vendas</strong><br />
+                sem gastar mais em anúncio.
               </p>
             </div>
 
@@ -106,6 +112,20 @@ export default function Logistics() {
             <p className="text-gray-600 text-xs mt-4 text-center">
               Cada loja que você entrega já sai com isso configurado.
             </p>
+          </div>
+        </div>
+
+        {/* Fechamento */}
+        <div className="text-center mt-14 space-y-4">
+          <div className="space-y-1 text-gray-300 text-lg">
+            <p>E quando você entrega uma loja com isso configurado…</p>
+            <p>você não é mais <span className="text-gray-400">"quem fez um site"</span>.</p>
+            <p className="text-white font-bold">Você vira o cara que gera resultado.</p>
+          </div>
+          <div className="space-y-1 text-gray-500 pt-2">
+            <p>E o melhor:</p>
+            <p>você não precisa descobrir isso sozinho.</p>
+            <p className="text-emerald-400 font-medium">Já está pronto dentro do método.</p>
           </div>
         </div>
       </div>

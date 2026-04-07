@@ -5,17 +5,17 @@ const items = [
   {
     icon: <Users className="w-6 h-6 text-emerald-400" />,
     title: "Grupo de Suporte Exclusivo",
-    desc: "Acesso ao grupo de alunos do MPN-On. Tire dúvidas, troque experiências e acompanhe quem está na mesma jornada que você.",
+    desc: "Um grupo com pessoas no mesmo caminho que você.\n\nPra trocar ideia, tirar dúvida e não travar.",
   },
   {
     icon: <MessageCircle className="w-6 h-6 text-emerald-400" />,
     title: "Acesso Direto ao Eduardo",
-    desc: "Ficou travado em alguma aula? Tem dúvida sobre um cliente específico? Você pode falar diretamente comigo. Nenhuma dúvida fica sem resposta. Respostas em até 24h.",
+    desc: "Travou?\n\nVocê fala comigo direto.",
   },
   {
     icon: <CheckCircle className="w-6 h-6 text-emerald-400" />,
     title: "Suporte em Cada Etapa",
-    desc: "Do primeiro clique na Shopify até a entrega da sua primeira loja para um cliente — você tem apoio em cada passo do caminho.",
+    desc: "Você não fica perdido em nenhuma etapa.\n\nTem direção do começo ao fim.",
   },
 ];
 
@@ -33,20 +33,24 @@ export default function Support() {
               <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
               <span className="text-emerald-400 text-xs font-bold uppercase tracking-widest">Você não está sozinho</span>
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold mb-5 leading-tight">
-              A maioria dos cursos te vende{" "}
-              <span className="text-red-400">e some.</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-5 leading-snug">
+              Você não vai precisar{" "}
+              <span className="text-emerald-400">fazer isso sozinho</span>
             </h2>
-            <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              Aqui é diferente. Você não compra um curso e fica sozinho tentando resolver. Tem grupo, tem suporte, tem acesso direto a mim.
-            </p>
-            <p className="text-gray-400 leading-relaxed">
-              Porque de nada adianta aprender se na hora de executar você travar em uma dúvida. O suporte existe exatamente pra isso.
-            </p>
-            <p className="text-white font-semibold mt-4 text-lg leading-snug">
-              Você não está comprando um curso. Está entrando para uma operação.{" "}
-              <span className="text-emerald-400">E eu estarei lá — do primeiro clique até o primeiro Pix no seu celular.</span>
-            </p>
+            <div className="space-y-3 text-gray-300 text-lg leading-relaxed">
+              <div className="space-y-1">
+                <p>Porque o problema nunca foi só aprender.</p>
+                <p className="text-white font-medium">É travar na hora de executar.</p>
+              </div>
+              <div className="space-y-1 pt-1">
+                <p>Você não está comprando um curso.</p>
+                <p>Você está entrando em uma operação.</p>
+                <p className="text-emerald-400 font-medium">
+                  E eu vou estar com você — do primeiro clique<br />
+                  até o primeiro Pix no seu celular.
+                </p>
+              </div>
+            </div>
           </div>
           </AnimateIn>
 
@@ -62,13 +66,26 @@ export default function Support() {
                 </div>
                 <div>
                   <h3 className="text-white font-bold mb-1">{item.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                  <div className="text-gray-400 text-sm leading-relaxed space-y-1">
+                    {item.desc.split('\n\n').map((line, i) => (
+                      <p key={i}>{line}</p>
+                    ))}
+                  </div>
                 </div>
               </div>
               </AnimateIn>
             ))}
           </div>
         </div>
+
+        <AnimateIn from="bottom" delay={150}>
+          <div className="text-center mt-14 space-y-1">
+            <p className="text-gray-400 text-lg">A diferença entre quem consegue…</p>
+            <p className="text-gray-300">e quem desiste no meio do caminho</p>
+            <p className="text-gray-400">quase sempre é essa:</p>
+            <p className="text-white font-bold text-xl pt-1">ter alguém pra orientar.</p>
+          </div>
+        </AnimateIn>
       </div>
     </section>
   );

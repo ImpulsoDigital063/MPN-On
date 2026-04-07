@@ -45,9 +45,9 @@ export default function AboutEduardo() {
         <AnimateIn from="bottom">
           <div className="text-center mb-16">
             <p className="text-emerald-400 font-bold tracking-widest uppercase text-sm mb-3">Seu Mentor</p>
-            <h2 className="text-3xl md:text-5xl font-extrabold mb-4">
-              Quem é{" "}
-              <span className="text-emerald-400">Eduardo Barros?</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-4 leading-snug">
+              Antes de tudo, deixa eu te falar{" "}
+              <span className="text-emerald-400">quem sou eu</span>
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
               Não é guru. Não é teórico. É alguém que passou pelo mesmo que você está passando — e encontrou a saída.
@@ -82,27 +82,38 @@ export default function AboutEduardo() {
           </AnimateIn>
 
           <AnimateIn from="right" delay={150}>
-            <div className="space-y-5 text-lg text-gray-300 leading-relaxed">
-              <p>
-                Comecei como você — cheio de expectativa, mas sem saber por onde começar de verdade. Passei 2 anos{" "}
-                <strong className="text-white">consumindo conteúdo de guru atrás de guru</strong> até perceber que o diferencial não era mais conhecimento:{" "}
-                <strong className="text-emerald-400">era executar.</strong>
+            <div className="space-y-4 text-gray-300 leading-relaxed">
+              <p className="text-lg text-white font-medium">
+                Eu não comecei sabendo disso tudo.
               </p>
               <p>
-                No final de 2022 tomei a decisão que mudou tudo:{" "}
-                <strong className="text-emerald-400">parei de consumir e foquei em executar</strong>.
-                Criei a UrbanFeet — loja de calçados com dropshipping nacional, zero estoque, operação automática.
-                Está no ar há mais de 3 anos.{" "}
-                <strong className="text-white">Mais de 1.600 pares vendidos para todo o Brasil</strong>{" "}
-                sem eu tocar em uma única caixa de sapato.
+                Na verdade, eu comecei igual você…<br />
+                meio perdido, vendo vídeo, tentando entender por onde começar.
               </p>
               <p>
-                Nesse processo, amigos começaram a me pedir para criar lojas pra eles. Vi que era um{" "}
-                <strong className="text-white">oceano azul de oportunidades</strong> — pouquíssima concorrência, demanda enorme.
-                Me especializei mais ainda. Criei um tema exclusivo que entrega{" "}
-                <strong className="text-emerald-400">frete expresso no mesmo dia</strong>{" "}
-                via motoboy e fretes para todo o Brasil com Melhor Envio.{" "}
-                <strong className="text-white">Essa solução foi o que fez tudo acelerar.</strong>
+                Fiquei um bom tempo só consumindo conteúdo.<br />
+                Curso, vídeo, dica…
+              </p>
+              <p className="text-gray-500">
+                E nada mudava de verdade.
+              </p>
+              <p>
+                Até que eu percebi uma coisa simples:
+              </p>
+              <p className="border-l-2 border-emerald-500/50 pl-4">
+                não era falta de informação…<br />
+                <strong className="text-white">era falta de fazer.</strong>
+              </p>
+              <p>
+                No final de 2022 eu decidi parar de só assistir<br />
+                e comecei a executar.
+              </p>
+              <p>
+                Criei minha primeira loja.<br />
+                Sem estoque. Sem estrutura complicada.
+              </p>
+              <p className="text-emerald-400 font-semibold">
+                E comecei a vender.
               </p>
             </div>
           </AnimateIn>
@@ -138,27 +149,41 @@ export default function AboutEduardo() {
         {/* ── Bloco 2: segunda foto + hoje ── */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <AnimateIn from="left">
-            <div className="space-y-5 text-lg text-gray-300 leading-relaxed">
+            <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
-                Passei <strong className="text-white">muitos anos fazendo Uber</strong> para pagar as contas. Hoje faz mais de{" "}
-                <strong className="text-emerald-400">2 anos que não preciso mais disso</strong> — graças ao digital.
-              </p>
-              <p>
-                Hoje tenho a{" "}
-                <strong className="text-white">Impulso Digital</strong> — agência com CNPJ regularizado,
-                onde entrego lojas Shopify, landing pages, lojas Next.js e consultoria estratégica para negócios locais.{" "}
-                <strong className="text-white">60+ clientes atendidos</strong>, prazos garantidos, suporte real.
+                Hoje já são mais de{" "}
+                <strong className="text-white">1.600 vendas pra todo o Brasil.</strong>
               </p>
               <p>
-                No meio de toda essa operação, nasceu o{" "}
-                <strong className="text-emerald-400">MPN-On</strong>. Porque eu queria ajudar quem está onde eu estava — perdido, consumindo conteúdo que só te faz sentir que o digital não é pra você.
+                E no meio disso tudo eu percebi outra coisa:
               </p>
-              <p className="text-white font-semibold leading-snug">
-                Esse curso existe porque acredito que meu propósito é ajudar pessoas a se encontrarem no digital.{" "}
-                <span className="text-emerald-400">Assim como eu me encontrei.</span>
+              <p className="border-l-2 border-emerald-500/50 pl-4">
+                tem muita empresa precisando disso…<br />
+                e pagando por isso.
               </p>
-              <p className="text-gray-400 text-base">
-                E funciona tanto para quem quer prestar serviço para outros, quanto para o empreendedor que quer montar o próprio site e operar sozinho.
+              <p>
+                Comecei a fazer lojas pra outras pessoas também.
+              </p>
+              <p className="text-gray-500">
+                E vi que tinha um mercado enorme…<br />
+                com pouca gente fazendo direito.
+              </p>
+              <p>
+                Hoje tenho minha agência<br />
+                e já ajudei mais de <strong className="text-white">60 negócios.</strong>
+              </p>
+              <p>
+                <strong className="text-emerald-400">O MPN-On nasceu disso.</strong>
+              </p>
+              <p className="text-gray-400">
+                Pra mostrar um caminho simples…<br />
+                sem enrolação.
+              </p>
+              <p className="text-gray-500">
+                Porque o que mudou pra mim não foi aprender mais…
+              </p>
+              <p className="text-white font-bold text-xl">
+                foi começar.
               </p>
             </div>
           </AnimateIn>

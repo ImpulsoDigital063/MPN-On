@@ -5,31 +5,58 @@ const steps = [
     num: "01",
     label: "Semana 1",
     title: "Você cria sua primeira loja",
-    desc: "Sem enrolação. Você abre a primeira aula e já começa a apertar os botões certos. Ao final da semana você tem uma loja completa no seu portfólio — com pagamento, frete e identidade visual configurados. Pronta pra mostrar pra qualquer cliente.",
+    desc: [
+      "Você abre a primeira aula… e já começa a montar sua loja.",
+      "Sem travar. Sem ficar perdido.",
+      "Em poucos dias, ela está pronta — com pagamento, frete e visual profissional.",
+      "E o mais importante: pronta pra mostrar pra qualquer cliente.",
+    ],
   },
   {
     num: "02",
     label: "Semana 2",
     title: "Você vai atrás dos seus primeiros clientes",
-    desc: "Olha ao redor. Quantas pessoas você conhece que vendem produto mas não têm loja online? Cada uma delas é um cliente em potencial. Com os scripts de prospecção em mãos, você chega, apresenta e fecha. Sem precisar de seguidores, sem precisar de tráfego pago.",
+    desc: [
+      "Agora você começa a olhar ao redor com outros olhos.",
+      "Todo negócio sem loja online vira uma oportunidade.",
+      "Você já sabe o que falar. Já tem o que mostrar.",
+      "E começa a fechar.",
+    ],
   },
   {
     num: "03",
     label: "Semana 3",
     title: "Você recebe pelo seu primeiro projeto",
-    desc: "Seu primeiro cliente aprova a loja. Você entrega via AnyDesk, mostra tudo funcionando — pagamento, frete expresso, Melhor Envio. Ele fica impressionado. Você recebe de R$600 a R$1.500 via Pix. Em menos de 3 dias de trabalho.",
+    desc: [
+      "O cliente aprova.",
+      "Você entrega a loja, mostra tudo funcionando…",
+      "e recebe seu primeiro Pix.",
+      "Entre R$600 e R$1.500 por poucos dias de trabalho.",
+    ],
   },
   {
     num: "04",
     label: "Mês 2",
     title: "Você escala e ativa sua loja própria",
-    desc: "Cliente chama cliente. Você já está criando 2, 3 lojas por mês. Em paralelo, ativa sua loja de calçados usando o método UrbanFeet — o fornecedor cuida do estoque e da entrega, você só se preocupa em vender. Dois fluxos de renda rodando ao mesmo tempo.",
+    desc: [
+      "Agora você já entendeu o jogo.",
+      "Um cliente puxa outro.",
+      "Você começa a fazer 2, 3 lojas por mês.",
+      "E em paralelo, ativa sua própria loja usando o método da UrbanFeet.",
+      "Dois caminhos de renda acontecendo ao mesmo tempo.",
+    ],
   },
   {
     num: "05",
-    label: "Mês 3 em diante",
-    title: "Você está no jogo",
-    desc: "Seu problema agora é ter serviço demais. O portfólio cresceu, os clientes te indicam, sua loja vende no automático. Você trabalha de casa, no seu horário, sem depender de ninguém. Foi exatamente assim que aconteceu comigo.",
+    label: "Mês 3+",
+    title: "Você está dentro",
+    desc: [
+      "Agora você está dentro.",
+      "Tem portfólio, tem cliente, tem demanda.",
+      "Sua loja roda no automático.",
+      "E você não depende mais de ninguém pra ganhar dinheiro.",
+      "Foi exatamente assim que aconteceu comigo.",
+    ],
   },
 ];
 
@@ -41,11 +68,10 @@ export default function Timeline() {
       <div className="container max-w-3xl mx-auto px-4 relative z-10">
         <AnimateIn from="bottom">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-extrabold mb-4">
+            <h2 className="text-3xl md:text-5xl font-extrabold mb-4 leading-snug">
               Sua jornada começa agora.{" "}
-              <span className="text-emerald-400">Veja o que acontece.</span>
+              <span className="text-emerald-400">E isso é o que vai acontecer.</span>
             </h2>
-            <p className="text-gray-400 text-lg">Do primeiro clique até o primeiro Pix recebido.</p>
           </div>
         </AnimateIn>
 
@@ -67,13 +93,24 @@ export default function Timeline() {
                     <span className="absolute top-3 right-4 font-bebas text-[56px] text-white/[0.04] leading-none select-none">{step.num}</span>
                     <span className="text-emerald-400 font-bold text-xs uppercase tracking-widest block mb-1">{step.label}</span>
                     <h3 className="text-base font-extrabold text-white mb-2">{step.title}</h3>
-                    <p className="text-gray-400 text-sm leading-relaxed">{step.desc}</p>
+                    <div className="space-y-1">
+                      {step.desc.map((line, j) => (
+                        <p key={j} className="text-gray-400 text-sm leading-relaxed">{line}</p>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </AnimateIn>
             ))}
           </div>
         </div>
+
+        <AnimateIn from="bottom" delay={150}>
+          <div className="text-center mt-14 space-y-1">
+            <p className="text-gray-400 text-lg">A única coisa que separa você disso…</p>
+            <p className="text-white font-bold text-xl">é começar.</p>
+          </div>
+        </AnimateIn>
       </div>
     </section>
   );

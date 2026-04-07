@@ -6,10 +6,10 @@ import CTAButton from "./CTAButton";
 import { useState, useEffect } from "react";
 
 const teasers = [
-  "Por que negócios locais estão desesperados por alguém com essa habilidade — e pagam de R$600 a R$1.500 por projeto",
-  "O modelo que gerou R$37.705 em 90 dias sem estoque, sem funcionário e sem sair de casa",
-  "O erro que mantém 90% das pessoas travadas no digital — e como eu saí dele no final de 2022",
-  "Como entregar uma loja completa em menos de uma semana e receber via Pix no mesmo dia",
+  "Por que negócios locais estão pagando até R$1.500 por algo simples — e como você pode fazer o mesmo",
+  "O modelo que gerou R$37 mil em 90 dias — sem estoque, sem funcionário e sem sair de casa",
+  "O erro que mantém a maioria travada — e como sair disso mesmo começando do zero",
+  "Como entregar uma loja em poucos dias e receber no Pix ainda na mesma semana",
 ];
 
 function LiveBadge() {
@@ -48,11 +48,11 @@ export default function VSL() {
             </div>
 
             <h2 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
-              Tudo que você precisa saber sobre o{" "}
-              <span className="text-emerald-400">MPN-On está aqui.</span>
+              Assista isso antes de tomar qualquer decisão sobre{" "}
+              <span className="text-emerald-400">ganhar dinheiro online</span>
             </h2>
             <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto">
-              Em poucos minutos você vai entender exatamente como funciona — e por que isso pode mudar sua situação financeira.
+              Nos próximos minutos, você vai entender como sair do zero e fazer sua primeira renda online — mesmo sem experiência.
             </p>
           </div>
 
@@ -102,8 +102,13 @@ export default function VSL() {
               </div>
             </div>
 
+            {/* Aviso de retenção */}
+            <p className="text-center text-yellow-500/80 text-xs font-medium mt-3 mb-1">
+              ⚠️ Assista até o final — isso vai fazer sentido no final do vídeo.
+            </p>
+
             {/* Abaixo do player */}
-            <div className="flex items-center justify-between mt-4 px-1">
+            <div className="flex items-center justify-between mt-2 px-1">
               <LiveBadge />
               <p className="text-gray-600 text-xs">Ative o som antes de começar</p>
             </div>

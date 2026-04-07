@@ -6,39 +6,39 @@ import { ChevronDown } from "lucide-react";
 const faqs = [
   {
     q: "Preciso saber programar?",
-    a: "Não. O MPN-On foi criado exatamente para quem não tem nenhum conhecimento técnico. Você aprende a criar lojas profissionais só apertando botões — exatamente como eu mostro nas aulas, clique por clique. Nenhuma linha de código.",
+    a: "Não.\n\nVocê não precisa saber programar.\n\nÉ abrir a aula e seguir os passos.",
   },
   {
     q: "Sou iniciante completo. Isso funciona pra mim?",
-    a: "Foi exatamente para você que esse curso foi criado. Comecei do zero absoluto — sem saber programar, sem dinheiro para anunciar, sem seguidores. O método não exige experiência prévia. Exige disposição para abrir a aula e executar.",
+    a: "Se você é iniciante, melhor ainda.\n\nO método foi feito pra quem está começando do zero.\n\nO único requisito é executar.",
   },
   {
     q: "Já comprei outros cursos e não funcionou. Por que esse seria diferente?",
-    a: "Entendo. A maioria dos cursos ensina teoria — você assiste, anota, e na hora de executar trava porque ninguém te mostrou o clique certo. Aqui é diferente: cada aula do módulo principal é gravada diretamente no painel, criando uma loja real do zero. Você vê exatamente o que fazer. E se travar, tem suporte direto comigo.",
+    a: "Porque aqui você não aprende teoria.\n\nVocê vê sendo feito na prática.\n\nE copia.",
   },
   {
     q: "Quanto tempo leva para criar uma loja?",
-    a: "Nas primeiras vezes, de 5 a 7 dias. Depois que você pega o jeito, 2 a 3 dias. Eu crio em média 7 lojas por mês trabalhando de forma organizada. E no final da primeira semana de curso, você já tem uma loja no seu portfólio — pronta para mostrar para qualquer cliente.",
+    a: "Em 5 a 7 dias você já tem sua primeira loja pronta.\n\nDepois disso, 2 a 3 dias por projeto.",
   },
   {
     q: "Quem vai comprar meu serviço?",
-    a: "Todo negócio local que vende produto mas ainda não tem loja online. Suplementos, roupas, joias, pet shops, cosméticos, artesanato, hamburguerias — são milhões de negócios no Brasil. Você não precisa ir longe: os seus primeiros clientes provavelmente estão a 5 minutos de você. O módulo 4 te ensina a prospectar com scripts prontos.",
+    a: "Negócios locais.\n\nGente que já vende, mas não tem loja online.\n\nE isso tem em todo lugar.",
   },
   {
     q: "Preciso investir muito para começar?",
-    a: "Não. A Shopify custa $1/mês nos primeiros 3 meses. O Yampi tem plano gratuito. O Melhor Envio é grátis para cadastrar. O investimento principal é no curso — e ele se paga com a primeira loja entregue.",
+    a: "Não.\n\nVocê começa com praticamente zero.\n\nE recupera o investimento com a primeira loja.",
   },
   {
     q: "Por quanto tempo tenho acesso?",
-    a: "Acesso vitalício. Uma vez dentro, o conteúdo é seu para sempre — incluindo todas as atualizações que forem feitas no curso. Você assiste no seu ritmo, volta quando precisar e consulta os PDFs de apoio sempre que for criar uma nova loja.",
+    a: "Acesso vitalício.\n\nO conteúdo é seu pra sempre — incluindo as atualizações.\n\nAssiste no seu ritmo, volta quando precisar.",
   },
   {
     q: "Preciso ter CNPJ?",
-    a: "Não é obrigatório para começar. Você pode criar lojas para clientes e receber via Pix como pessoa física. Conforme seu volume crescer, aí faz sentido formalizar — mas para os primeiros projetos, não é necessário.",
+    a: "Não precisa pra começar.\n\nVocê recebe via Pix como pessoa física.\n\nQuando o volume crescer, você formaliza.",
   },
   {
     q: "E se eu não gostar do curso?",
-    a: "Você tem 7 dias de garantia incondicional. Se por qualquer motivo achar que o curso não é para você, basta pedir o reembolso e devolvemos 100% do valor pago. Sem perguntas, sem burocracia. O risco é todo meu.",
+    a: "Você tem 7 dias pra testar.\n\nSe não fizer sentido, eu devolvo 100% do seu dinheiro.\n\nSem pergunta.",
   },
 ];
 
@@ -58,7 +58,11 @@ function FAQItem({ faq }: { faq: { q: string; a: string } }) {
       </button>
       {open && (
         <div className="px-6 pb-6">
-          <p className="text-gray-400 leading-relaxed">{faq.a}</p>
+          <div className="text-gray-400 leading-relaxed space-y-2">
+            {faq.a.split("\n\n").map((line, i) => (
+              <p key={i}>{line}</p>
+            ))}
+          </div>
         </div>
       )}
     </div>
@@ -70,22 +74,20 @@ export default function FAQ() {
     <section className="py-20 md:py-28">
       <div className="container max-w-3xl mx-auto px-4">
         <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-5xl font-extrabold mb-4">
-            Ainda tem <span className="text-emerald-400">alguma dúvida?</span>
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-4 leading-snug">
+            Se você chegou até aqui,{" "}
+            <span className="text-emerald-400">provavelmente está pensando nisso:</span>
           </h2>
-          <p className="text-gray-400 text-lg">
-            As perguntas mais comuns de quem está na mesma posição que você estava.
-          </p>
         </div>
         <div className="space-y-4 mb-12">
           {faqs.map((faq) => (
             <FAQItem key={faq.q} faq={faq} />
           ))}
         </div>
-        <p className="text-center text-gray-500 text-base">
-          Dúvida respondida?{" "}
-          <span className="text-white font-semibold">Então só falta uma coisa.</span>
-        </p>
+        <div className="text-center space-y-1">
+          <p className="text-gray-400 text-lg">Você já entendeu como funciona.</p>
+          <p className="text-white font-bold text-xl">Agora é decisão.</p>
+        </div>
       </div>
     </section>
   );
