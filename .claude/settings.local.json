@@ -17,7 +17,8 @@
       "Bash(taskkill /PID 26460 /F)",
       "WebFetch(domain:www.impulsodigital063.com)",
       "Bash(grep:*)",
-      "Bash(taskkill /PID 540 /F)"
+      "Bash(taskkill /PID 540 /F)",
+      "Bash(git:*)"
     ]
   }
 }
