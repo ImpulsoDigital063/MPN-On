@@ -64,7 +64,7 @@ export default function PainPoints() {
           {pains.map((p, i) => {
             const Icon = p.icon;
             return (
-              <AnimateIn key={p.title} from={p.from} delay={i * 100}>
+              <AnimateIn key={p.title} from="bottom" delay={i * 100}>
                 <div className="relative bg-white/[0.03] border border-white/8 rounded-2xl p-6 hover:border-red-500/30 hover:bg-red-500/[0.02] transition-all group overflow-hidden h-full">
                   <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-red-500/60 via-red-500/20 to-transparent rounded-l-2xl" />
                   <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-red-500/20 via-transparent to-transparent" />

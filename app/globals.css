@@ -17,9 +17,20 @@
   50% { box-shadow: 0 0 60px rgba(16, 185, 129, 0.6); }
 }
 
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 @keyframes ticker {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
+}
+
+@media (max-width: 767px) {
+  .ticker-strip {
+    animation-duration: 14s !important;
+  }
 }
 
 @keyframes ticker-vert-up {

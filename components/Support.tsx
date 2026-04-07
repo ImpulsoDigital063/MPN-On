@@ -10,7 +10,7 @@ const items = [
   {
     icon: <MessageCircle className="w-6 h-6 text-emerald-400" />,
     title: "Acesso Direto ao Eduardo",
-    desc: "Ficou travado em alguma aula? Tem dúvida sobre um cliente específico? Você pode falar diretamente comigo. Nenhuma dúvida fica sem resposta.",
+    desc: "Ficou travado em alguma aula? Tem dúvida sobre um cliente específico? Você pode falar diretamente comigo. Nenhuma dúvida fica sem resposta. Respostas em até 24h.",
   },
   {
     icon: <CheckCircle className="w-6 h-6 text-emerald-400" />,
@@ -41,7 +41,7 @@ export default function Support() {
               Aqui é diferente. Você não compra um curso e fica sozinho tentando resolver. Tem grupo, tem suporte, tem acesso direto a mim.
             </p>
             <p className="text-gray-400 leading-relaxed">
-              Porque de nada adianta aprender se na hora de executar você travar em uma dúvida boba. O suporte existe exatamente pra isso.
+              Porque de nada adianta aprender se na hora de executar você travar em uma dúvida. O suporte existe exatamente pra isso.
             </p>
             <p className="text-white font-semibold mt-4 text-lg leading-snug">
               Você não está comprando um curso. Está entrando para uma operação.{" "}

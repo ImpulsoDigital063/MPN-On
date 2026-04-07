@@ -177,7 +177,7 @@ export default function Curriculum() {
                           <Icon className="w-4 h-4 text-emerald-400 flex-shrink-0" />
                           <p className="text-sm font-bold text-emerald-400">{group.title}</p>
                         </div>
-                        <div className="grid md:grid-cols-3 gap-2">
+                        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-2">
                           {group.items.map((item) => (
                             <div key={item.bold} className="flex items-start gap-2 text-sm">
                               <CircleCheck className="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" />

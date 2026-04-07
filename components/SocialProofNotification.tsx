@@ -79,7 +79,7 @@ export default function SocialProofNotification() {
             {n.name}
           </p>
           <p className="text-gray-400 text-[10px] md:text-xs leading-tight">
-            de {n.city} garantiu o MPN-On
+            de {n.city} entrou agora no MPN-On
           </p>
           <p className="text-emerald-500 text-[10px] font-medium mt-0.5">{timeStr}</p>
         </div>

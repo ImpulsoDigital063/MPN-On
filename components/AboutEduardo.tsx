@@ -9,9 +9,9 @@ const EDUARDO_JOURNEY = "/eduardo_journey.jpg";
 const milestones = [
   {
     year: "2020",
-    title: "O início — e o erro",
-    desc: "Comecei a estudar o mercado digital. Mas fiquei 2 anos preso de vídeo em vídeo, curso em curso. O conteúdo me fazia sentir que o digital não era pra mim.",
-    color: "red",
+    title: "O início — cheio de expectativa",
+    desc: "Entrei no mercado digital com tudo. Mas fiquei 2 anos consumindo curso atrás de curso sem sair do lugar — até perceber que o problema não era falta de conteúdo.",
+    color: "amber",
   },
   {
     year: "2022",
@@ -84,8 +84,9 @@ export default function AboutEduardo() {
           <AnimateIn from="right" delay={150}>
             <div className="space-y-5 text-lg text-gray-300 leading-relaxed">
               <p>
-                Em 2020, comecei a estudar o mercado digital cheio de expectativa. Passei 2 anos{" "}
-                <strong className="text-white">de vídeo em vídeo, curso em curso</strong> — e no final do dia me sentia mais confuso do que antes. O conteúdo me fazia sentir que o digital não era pra mim.
+                Comecei como você — cheio de expectativa, mas sem saber por onde começar de verdade. Passei 2 anos{" "}
+                <strong className="text-white">consumindo conteúdo de guru atrás de guru</strong> até perceber que o diferencial não era mais conhecimento:{" "}
+                <strong className="text-emerald-400">era executar.</strong>
               </p>
               <p>
                 No final de 2022 tomei a decisão que mudou tudo:{" "}

@@ -20,6 +20,7 @@ import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import StickyBuyBar from "@/components/StickyBuyBar";
 import SocialProofNotification from "@/components/SocialProofNotification";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
   return (
@@ -46,6 +47,7 @@ export default function Home() {
       <Footer />
       <StickyBuyBar />
       <SocialProofNotification />
+      <WhatsAppButton />
     </main>
   );
 }

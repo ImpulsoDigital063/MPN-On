@@ -23,7 +23,7 @@ function Ticker() {
   return (
     <div className="relative overflow-hidden border-y border-emerald-500/20 bg-emerald-950/30 py-3">
       <div
-        className="flex gap-10 whitespace-nowrap"
+        className="flex gap-10 whitespace-nowrap ticker-strip"
         style={{ animation: "ticker 28s linear infinite" }}
       >
         {doubled.map((item, i) => (
@@ -144,45 +144,60 @@ export default function Hero() {
             </div>
 
             {/* Headline no vazio à esquerda do rosto */}
-            <div className="absolute left-4 z-20 pr-[50%]" style={{ top: "20%" }}>
-              {/* Label */}
-              <span className="text-emerald-400 text-[9px] font-bold uppercase tracking-[0.3em] block mb-0.5">
-                Conheça o
+            <div className="absolute left-4 z-20 pr-[48%]" style={{ top: "38%" }}>
+              {/* Label Método */}
+              <span className="text-emerald-400 text-[10px] font-bold uppercase tracking-[0.2em] mb-1 block">
+                Método
               </span>
-              {/* MÉTODO — outline fantasma */}
-              <p className="font-bebas leading-[0.9] tracking-wide"
+              {/* MEU PRIMEIRO — metal branco/prata */}
+              <p
+                className="font-bebas leading-[0.9] tracking-[0.04em] uppercase block"
                 style={{
-                  fontSize: "clamp(44px,12vw,68px)",
-                  WebkitTextStroke: "1.5px rgba(255,255,255,0.65)",
-                  WebkitTextFillColor: "transparent",
-                  color: "transparent",
-                }}>
-                MÉTODO
-              </p>
-              {/* MPN — sólido grande gradiente */}
-              <p className="font-bebas leading-[0.85] tracking-tight"
-                style={{
-                  fontSize: "clamp(64px,17vw,96px)",
-                  backgroundImage: "linear-gradient(110deg, #6ee7b7 0%, #10b981 50%, #059669 100%)",
+                  fontSize: "clamp(40px, 11vw, 68px)",
+                  background: "linear-gradient(160deg, #a8a8a8 0%, #ffffff 28%, #e8e8e8 42%, #c0c0c0 55%, #ffffff 70%, #909090 88%, #d4d4d4 100%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
-                  filter: "drop-shadow(0 0 18px rgba(16,185,129,0.5))",
-                }}>
-                MPN
+                  filter: "drop-shadow(0px 2px 4px rgba(0,0,0,0.7)) drop-shadow(0 0 20px rgba(200,200,200,0.12))",
+                }}
+              >
+                MEU PRIMEIRO
               </p>
-              {/* Acento */}
-              <div className="flex items-center gap-2 mt-1">
-                <div className="w-6 h-0.5 bg-emerald-500" />
-                <span className="text-gray-500 text-[9px] uppercase tracking-widest">Meu Primeiro Negócio</span>
-              </div>
+              {/* NEGÓCIO — metal verde */}
+              <p
+                className="font-bebas leading-[0.85] tracking-[0.04em] uppercase block"
+                style={{
+                  fontSize: "clamp(40px, 11vw, 68px)",
+                  background: "linear-gradient(160deg, #064e3b 0%, #34d399 22%, #6ee7b7 40%, #10b981 54%, #a7f3d0 68%, #059669 80%, #34d399 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                  filter: "drop-shadow(0px 2px 4px rgba(0,0,0,0.8)) drop-shadow(0 0 24px rgba(16,185,129,0.35))",
+                }}
+              >
+                NEGÓCIO
+              </p>
+              {/* ON-LINE — metal prata menor */}
+              <p
+                className="font-bebas leading-[0.85] tracking-[0.08em] uppercase block"
+                style={{
+                  fontSize: "clamp(26px, 7vw, 44px)",
+                  background: "linear-gradient(160deg, #a8a8a8 0%, #ffffff 28%, #e8e8e8 42%, #c0c0c0 55%, #ffffff 70%, #909090 88%, #d4d4d4 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                  filter: "drop-shadow(0px 2px 4px rgba(0,0,0,0.7)) drop-shadow(0 0 16px rgba(200,200,200,0.1))",
+                }}
+              >
+                On-line
+              </p>
             </div>
 
             {/* Fade suave do ombro até desaparecer completamente */}
             <div
               className="absolute inset-0 pointer-events-none"
               style={{
-                background: "linear-gradient(to bottom, transparent 20%, rgba(5,5,5,0.15) 38%, rgba(5,5,5,0.55) 55%, rgba(5,5,5,0.85) 70%, rgba(5,5,5,0.97) 84%, #050505 100%)",
+                background: "linear-gradient(to bottom, transparent 30%, rgba(5,5,5,0.08) 45%, rgba(5,5,5,0.25) 58%, rgba(5,5,5,0.55) 70%, rgba(5,5,5,0.82) 80%, rgba(5,5,5,0.96) 90%, #050505 100%)",
               }}
             />
           </div>
@@ -240,22 +255,47 @@ export default function Hero() {
 
           {/* Headline desktop */}
           <div className="mb-5">
-            <h1 className="font-bebas text-[clamp(72px,7.5vw,116px)] leading-none tracking-wide text-white">
-              Crie Lojas
-            </h1>
             <h1
-              className="font-bebas text-[clamp(72px,7.5vw,116px)] leading-none tracking-wide"
+              className="font-bebas leading-none tracking-[0.06em] uppercase block whitespace-nowrap"
               style={{
-                backgroundImage: "linear-gradient(105deg, #34d399 0%, #10b981 40%, #6ee7b7 100%)",
+                fontSize: "clamp(72px, 8.5vw, 130px)",
+                background: "linear-gradient(160deg, #a8a8a8 0%, #ffffff 28%, #e8e8e8 42%, #c0c0c0 55%, #ffffff 70%, #909090 88%, #d4d4d4 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
+                filter: "drop-shadow(0px 3px 6px rgba(0,0,0,0.6)) drop-shadow(0 0 30px rgba(200,200,200,0.1))",
               }}
             >
-              Shopify
+              Meu Primeiro
             </h1>
-            <h2 className="font-bebas text-[clamp(24px,2.8vw,42px)] leading-none tracking-widest text-gray-500 mt-1">
-              e cobre R$600 a R$1.500 por projeto
+            <h1
+              className="font-bebas leading-none tracking-[0.06em] uppercase block whitespace-nowrap"
+              style={{
+                fontSize: "clamp(72px, 8.5vw, 130px)",
+                background: "linear-gradient(160deg, #064e3b 0%, #34d399 22%, #6ee7b7 40%, #10b981 54%, #a7f3d0 68%, #059669 80%, #34d399 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+                filter: "drop-shadow(0px 3px 6px rgba(0,0,0,0.7)) drop-shadow(0 0 40px rgba(16,185,129,0.3))",
+              }}
+            >
+              Negócio
+            </h1>
+            <h1
+              className="font-bebas leading-none tracking-[0.08em] uppercase block whitespace-nowrap"
+              style={{
+                fontSize: "clamp(44px, 5vw, 80px)",
+                background: "linear-gradient(160deg, #a8a8a8 0%, #ffffff 28%, #e8e8e8 42%, #c0c0c0 55%, #ffffff 70%, #909090 88%, #d4d4d4 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+                filter: "drop-shadow(0px 3px 6px rgba(0,0,0,0.6)) drop-shadow(0 0 20px rgba(200,200,200,0.1))",
+              }}
+            >
+              On-line
+            </h1>
+            <h2 className="font-bebas text-[clamp(22px,2.5vw,38px)] leading-none tracking-widest text-gray-500 mt-2">
+              Crie lojas Shopify · Cobre R$600 a R$1.500 por projeto
             </h2>
           </div>
 
