@@ -154,7 +154,10 @@ function useVideoTracking(): void {
 // ─── Hook: rastreamento de cliques em CTAs ───────────────────────────────────
 //
 // Event delegation: escuta click e touchstart no document.
-// Alvos: elementos com [data-track-cta] (CTAButton e StickyBuyBar já têm o atributo).
+// Alvos: elementos com [data-track="cta"] ou [data-track="scroll"].
+//   data-track="cta"    → fbq('trackCustom', 'Click_CTA')   — botões de checkout
+//   data-track="scroll" → fbq('trackCustom', 'Scroll_CTA')  — botões de âncora
+//
 // Debounce de 500ms por elemento para evitar duplo disparo touch → click no mobile.
 
 function useCTATracking(): void {
@@ -162,14 +165,16 @@ function useCTATracking(): void {
     const lastFired = new WeakMap<Element, number>()
 
     function onInteraction(e: Event): void {
-      const target = (e.target as Element).closest('[data-track-cta]')
+      const target = (e.target as Element).closest('[data-track="cta"], [data-track="scroll"]')
       if (!target) return
 
       const now = Date.now()
       if (now - (lastFired.get(target) ?? 0) < 500) return
-
       lastFired.set(target, now)
-      window.fbq?.('trackCustom', 'Click_CTA')
+
+      const trackType = (target as HTMLElement).dataset.track
+      if (trackType === 'cta') window.fbq?.('trackCustom', 'Click_CTA')
+      else if (trackType === 'scroll') window.fbq?.('trackCustom', 'Scroll_CTA')
     }
 
     document.addEventListener('click', onInteraction)

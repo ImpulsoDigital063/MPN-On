@@ -36,7 +36,7 @@ export default function StickyBuyBar() {
               href={KIWIFY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              data-track-cta
+              data-track="cta"
               className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-sm px-5 py-3 rounded-full transition-all hover:scale-105 whitespace-nowrap shadow-[0_0_20px_rgba(16,185,129,0.4)]"
             >
               GARANTIR VAGA <ArrowRight className="w-4 h-4 flex-shrink-0" />
