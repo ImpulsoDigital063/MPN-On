@@ -13,20 +13,20 @@ const HERO_VARIANT: 'A' | 'B' = 'A'
 
 const heroVariants = {
   A: {
-    headline:   'Como sair do zero e ganhar até R$1.500 criando lojas simples para negócios locais',
-    subheadline:'Mesmo sem experiência, sem aparecer e sem saber programar.',
-    prova:      'Uma loja. Menos de 7 dias. Primeiro pagamento no Pix.',
-    reforco:    'Você só precisa de 1 cliente pra recuperar seu investimento.',
-    cta:        '👉 Quero ver como funciona',
+    headline:   (<>Crie lojas para negócios locais e receba de <span className="text-emerald-400 font-extrabold">R$600 a R$1.500</span> por projeto — mesmo saindo do zero</>),
+    subheadline:'Mesmo que você nunca tenha criado uma loja antes.',
+    prova:      (<>Uma loja. Menos de <strong className="text-white">7 dias</strong>. Primeiro pagamento no <strong className="text-white">Pix</strong>.</>),
+    reforco:    (<>Você só precisa de <strong className="text-white">1 cliente</strong> pra recuperar seu investimento.</>),
+    cta:        'Quero criar minha primeira loja',
   },
   B: {
-    headline:   'Como sair do zero e ganhar até R$1.500 criando lojas simples para negócios locais',
-    subheadline:'Mesmo que hoje você não saiba nada — eu te mostro exatamente o que fazer, do início ao primeiro cliente.',
-    prova:      'Uma loja. Menos de 7 dias. Primeiro pagamento no Pix.',
-    reforco:    'Você não precisa saber fazer — só seguir o passo a passo.',
-    cta:        '👉 Quero ver como funciona',
+    headline:   (<>Como criar lojas para negócios locais e receber até <span className="text-emerald-400 font-extrabold">R$1.500</span> por projeto — mesmo saindo do zero</>),
+    subheadline:'Mesmo que hoje você não saiba nada — te mostro cada passo, do início ao primeiro Pix.',
+    prova:      (<>Uma loja. Menos de <strong className="text-white">7 dias</strong>. Primeiro pagamento no <strong className="text-white">Pix</strong>.</>),
+    reforco:    (<>Você não precisa saber fazer — só seguir o <strong className="text-white">passo a passo</strong>.</>),
+    cta:        'Quero criar minha primeira loja',
   },
-} as const
+}
 
 const copy = heroVariants[HERO_VARIANT]
 // ───────────────────────────────────────────────────────────────────────────
@@ -66,17 +66,17 @@ function Ticker() {
 
 function TrustBadges() {
   return (
-    <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500">
+    <div className="flex flex-wrap items-center gap-3 text-xs text-gray-400">
       <span className="flex items-center gap-1.5">
-        <Lock className="w-3 h-3" /> Pagamento Seguro
+        <Lock className="w-3 h-3 text-emerald-600" /> Pagamento Seguro
       </span>
-      <span className="text-gray-700">|</span>
+      <span className="text-gray-600">·</span>
       <span className="flex items-center gap-1.5">
-        <ShieldCheck className="w-3 h-3" /> Garantia 7 dias
+        <ShieldCheck className="w-3 h-3 text-emerald-600" /> Garantia 7 dias
       </span>
-      <span className="text-gray-700">|</span>
+      <span className="text-gray-600">·</span>
       <span className="flex items-center gap-1.5">
-        <Zap className="w-3 h-3" /> Acesso Imediato
+        <Zap className="w-3 h-3 text-emerald-600" /> Acesso Imediato
       </span>
     </div>
   );
@@ -227,28 +227,30 @@ export default function Hero() {
           </div>
 
           {/* Conteúdo — sobe sobre o fade */}
-          <div className="relative z-10 bg-[#050505] px-5 pt-4 pb-8 flex flex-col gap-3 -mt-24">
-            <p className="text-base text-gray-300 leading-relaxed">
+          <div className="relative z-10 bg-[#050505] px-5 pt-2 pb-8 flex flex-col -mt-24">
+            <p className="text-base text-gray-300 leading-relaxed mb-2">
               {copy.headline}
             </p>
-            <p className="text-sm text-gray-400 leading-relaxed">
+            <p className="text-sm text-gray-300 leading-relaxed mb-3">
               {copy.subheadline}
             </p>
-            <p className="text-sm font-bold text-emerald-400">
+            <p className="text-base font-extrabold text-emerald-400 mb-1">
               {copy.prova}
             </p>
-            <p className="text-xs text-gray-500">
+            <p className="text-sm text-gray-300 mb-4">
               {copy.reforco}
             </p>
 
-            <div className="flex flex-col gap-0.5">
+            <div className="flex flex-col gap-0.5 mb-4">
               <div className="flex items-baseline gap-2">
                 <span className="text-xl font-extrabold text-white">R$297</span>
                 <span className="text-gray-400 text-xs font-medium">no Pix</span>
               </div>
               <span className="text-gray-600 text-xs">ou 3x de R$105 no cartão</span>
             </div>
-            <CTAButton href="#oferta">{copy.cta}</CTAButton>
+            <div className="mb-3">
+              <CTAButton href="#oferta">{copy.cta}</CTAButton>
+            </div>
             <TrustBadges />
             <p className="text-gray-600 text-xs border-t border-white/5 pt-3">
               ↓ Como um e-commerce sem estoque faturou R$37k em 90 dias? Continue lendo.
@@ -322,21 +324,21 @@ export default function Hero() {
             >
               On-line
             </h1>
-            <h2 className="font-bebas text-[clamp(22px,2.5vw,38px)] leading-none tracking-widest text-gray-500 mt-2">
-              Crie lojas Shopify · Cobre R$600 a R$1.500 por projeto
+            <h2 className="font-bebas text-[clamp(22px,2.5vw,38px)] leading-none tracking-widest text-gray-400 mt-2">
+              Crie lojas Shopify · Cobre <span className="text-emerald-500/80">R$600 a R$1.500</span> por projeto
             </h2>
           </div>
 
-          <p className="text-base text-gray-300 leading-relaxed max-w-lg mb-1">
+          <p className="text-base text-gray-300 leading-relaxed max-w-lg mb-2">
             {copy.headline}
           </p>
-          <p className="text-sm text-gray-400 max-w-md mb-1">
+          <p className="text-sm text-gray-300 max-w-md mb-3">
             {copy.subheadline}
           </p>
-          <p className="text-sm font-bold text-emerald-400 max-w-md mb-1">
+          <p className="text-lg font-extrabold text-emerald-400 max-w-md mb-2">
             {copy.prova}
           </p>
-          <p className="text-xs text-gray-500 max-w-md mb-5">
+          <p className="text-sm text-gray-300 max-w-md mb-6">
             {copy.reforco}
           </p>
 

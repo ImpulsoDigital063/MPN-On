@@ -38,7 +38,7 @@ export default function SocialProofNotification() {
     setCurrent(idx);
     setTimeStr(t);
     setVisible(true);
-    setTimeout(() => setVisible(false), 8000);
+    setTimeout(() => setVisible(false), 6500);
   }, []);
 
   useEffect(() => {
@@ -70,16 +70,16 @@ export default function SocialProofNotification() {
         visible ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
       }`}
     >
-      <div className="bg-[#0f0f0f] border border-emerald-500/30 rounded-xl px-3 py-2 shadow-2xl flex items-center gap-2.5 max-w-[240px] md:max-w-[280px] backdrop-blur-md">
-        <div className="bg-emerald-500/15 p-1.5 md:p-2 rounded-lg flex-shrink-0">
-          <ShoppingBag className="w-4 h-4 md:w-5 md:h-5 text-emerald-400" />
+      <div className="bg-[#0f0f0f] border border-emerald-500/30 rounded-xl px-2.5 py-1.5 shadow-2xl flex items-center gap-2 max-w-[200px] md:max-w-[260px] backdrop-blur-md">
+        <div className="bg-emerald-500/15 p-1 md:p-1.5 rounded-lg flex-shrink-0">
+          <ShoppingBag className="w-3 h-3 md:w-4 md:h-4 text-emerald-400" />
         </div>
         <div className="flex-1 min-w-0">
-          <p className="text-white text-xs md:text-sm font-bold leading-tight">
+          <p className="text-white text-[11px] md:text-xs font-bold leading-tight">
             {n.name}
           </p>
-          <p className="text-gray-400 text-[10px] md:text-xs leading-tight">
-            de {n.city} entrou agora no MPN-On
+          <p className="text-gray-400 text-[10px] leading-tight">
+            de {n.city} entrou no MPN-On
           </p>
           <p className="text-emerald-500 text-[10px] font-medium mt-0.5">{timeStr}</p>
         </div>
