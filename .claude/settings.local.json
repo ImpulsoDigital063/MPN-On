@@ -5,7 +5,18 @@
       "Bash(npm install:*)",
       "Bash(npx tsc:*)",
       "Bash(grep -n \"img\\\\|<img\" /c/Users/DELL/meuprimeironegocio/components/*.tsx)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(vercel:*)",
+      "WebFetch(domain:criativosdoceu.com)",
+      "WebSearch",
+      "Bash(cp \"C:/Users/DELL/Downloads/capa_modulo_HD.jpg\" \"C:/Users/DELL/meuprimeironegocio/public/modules/modulo02.jpg\")",
+      "Bash(cp \"C:/Users/DELL/Downloads/capa_modulo04_HD \\(1\\).jpg\" \"C:/Users/DELL/meuprimeironegocio/public/modules/modulo04.jpg\")",
+      "Bash(cp \"C:/Users/DELL/Downloads/capa_modulo03_HD.jpg\" \"C:/Users/DELL/meuprimeironegocio/public/modules/bonus03.jpg\")",
+      "Bash(cp \"C:/Users/DELL/Downloads/capa_modulo01_HD \\(1\\).jpg\" \"C:/Users/DELL/meuprimeironegocio/public/modules/modulo01.jpg\")",
+      "Bash(npx next:*)",
+      "Bash(taskkill /PID 26460 /F)",
+      "WebFetch(domain:www.impulsodigital063.com)",
+      "Bash(grep:*)"
     ]
   }
 }

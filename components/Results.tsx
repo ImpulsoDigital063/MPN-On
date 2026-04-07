@@ -1,46 +1,15 @@
 import Image from "next/image";
-import { DollarSign } from "lucide-react";
+import CTAButton from "./CTAButton";
+import AnimateIn from "./AnimateIn";
 
-const DASH_30 =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663305937026/Jey4huR4MGMLTE3MYskJ4P/dashboard_30dias_v2_3658aeac.png";
-const DASH_60 =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663305937026/Jey4huR4MGMLTE3MYskJ4P/dashboard_60dias_v2_075f6511.png";
-const DASH_90 =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663305937026/Jey4huR4MGMLTE3MYskJ4P/dashboard_90dias_v2_492c2a36.png";
-const EDUARDO_TABLET =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663305937026/Jey4huR4MGMLTE3MYskJ4P/eduardo_tablet_e9f981f2.jpeg";
+const DASH_30 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663305937026/Jey4huR4MGMLTE3MYskJ4P/dashboard_30dias_v2_3658aeac.png";
+const DASH_60 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663305937026/Jey4huR4MGMLTE3MYskJ4P/dashboard_60dias_v2_075f6511.png";
+const DASH_90 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663305937026/Jey4huR4MGMLTE3MYskJ4P/dashboard_90dias_v2_492c2a36.png";
 
 const dashboards = [
-  {
-    label: "30 DIAS",
-    alt: "Faturamento 30 dias",
-    src: DASH_30,
-    value: "R$ 13.072,48",
-    period: "30 dias",
-    highlight: false,
-  },
-  {
-    label: "60 DIAS",
-    alt: "Faturamento 60 dias",
-    src: DASH_60,
-    value: "R$ 24.559,18",
-    period: "60 dias",
-    highlight: false,
-  },
-  {
-    label: "90 DIAS",
-    alt: "Faturamento 90 dias",
-    src: DASH_90,
-    value: "R$ 37.705,24",
-    period: "90 dias",
-    highlight: true,
-  },
-];
-
-const serviceMonths = [
-  { month: "Mês 1", value: "R$ 4.800", sub: "6 lojas entregues" },
-  { month: "Mês 2", value: "R$ 6.200", sub: "8 lojas entregues" },
-  { month: "Mês 3", value: "R$ 5.400", sub: "7 lojas entregues" },
+  { label: "30 DIAS", period: "Dezembro/2025", months: "dez", alt: "Faturamento 30 dias", src: DASH_30, value: "R$ 13.072,48", highlight: false },
+  { label: "60 DIAS", period: "Nov + Dez/2025", months: "nov + dez", alt: "Faturamento 60 dias", src: DASH_60, value: "R$ 24.559,18", highlight: false },
+  { label: "90 DIAS", period: "Out + Nov + Dez/2025", months: "out + nov + dez", alt: "Faturamento 90 dias", src: DASH_90, value: "R$ 37.705,24", highlight: true },
 ];
 
 export default function Results() {
@@ -48,38 +17,71 @@ export default function Results() {
     <section className="py-20 md:py-28 bg-white/[0.02] border-y border-white/5 relative overflow-hidden">
       <div className="absolute right-0 top-0 w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-[130px] pointer-events-none" />
 
-      <div className="container max-w-6xl mx-auto relative z-10 px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-extrabold mb-6">
-            Contra Fatos{" "}
-            <span className="text-emerald-400">Não Há Argumentos</span>
+      <div className="container max-w-5xl mx-auto relative z-10 px-4">
+        <AnimateIn from="bottom">
+        <div className="text-center mb-14">
+          <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-4 py-1.5 mb-6">
+            <span className="text-emerald-400 text-xs font-bold uppercase tracking-widest">Resultados Reais · 2º semestre 2025</span>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-5">
+            É isso que você pode estar{" "}
+            <span className="text-emerald-400">faturando.</span>
           </h2>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Resultados reais da{" "}
-            <strong className="text-emerald-400">UrbanFeet</strong> nos últimos
-            meses. Esse é o exato modelo de negócio que você vai receber pronto.
+          <p className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
+            Esses são os dashboards reais da{" "}
+            <strong className="text-emerald-400">UrbanFeet</strong> — minha loja de calçados online, que opera há mais de 3 anos com{" "}
+            <strong className="text-white">dropshipping nacional</strong>. Fornecedor brasileiro, entrega rápida, sem AliExpress, sem produto preso na alfândega.
           </p>
+          <div className="mt-5 inline-flex items-center gap-3 bg-emerald-500/10 border border-emerald-500/30 rounded-xl px-5 py-3">
+            <span className="bg-emerald-500 text-black text-xs font-extrabold px-2 py-0.5 rounded-md">BÔNUS · MÓDULO 3</span>
+            <p className="text-gray-300 text-sm">
+              Você vai aprender a montar exatamente esse modelo — e recebe o contato direto do meu fornecedor.
+            </p>
+          </div>
+        </div>
+        </AnimateIn>
+
+        <p className="text-center text-gray-600 text-sm mb-6 italic">
+          Screenshots reais do painel da UrbanFeet — sem edição, sem filtro.
+        </p>
+
+        {/* Contexto dos períodos */}
+        <div className="max-w-4xl mx-auto mb-8 bg-white/[0.03] border border-white/8 rounded-2xl p-5">
+          <p className="text-gray-300 text-sm font-semibold mb-3">Os 3 dashboards cobrem o último trimestre de 2025:</p>
+          <div className="grid grid-cols-3 gap-3 text-center">
+            <div className="bg-black/40 rounded-xl p-3 border border-white/5">
+              <p className="text-emerald-400 font-bold text-xs uppercase tracking-widest mb-1">30 dias</p>
+              <p className="text-white text-sm font-semibold">Dezembro</p>
+              <p className="text-gray-500 text-xs mt-0.5">2025</p>
+            </div>
+            <div className="bg-black/40 rounded-xl p-3 border border-white/5">
+              <p className="text-emerald-400 font-bold text-xs uppercase tracking-widest mb-1">60 dias</p>
+              <p className="text-white text-sm font-semibold">Nov + Dez</p>
+              <p className="text-gray-500 text-xs mt-0.5">2025</p>
+            </div>
+            <div className="bg-black/40 rounded-xl p-3 border border-emerald-500/20">
+              <p className="text-emerald-400 font-bold text-xs uppercase tracking-widest mb-1">90 dias</p>
+              <p className="text-white text-sm font-semibold">Out + Nov + Dez</p>
+              <p className="text-gray-500 text-xs mt-0.5">2025</p>
+            </div>
+          </div>
         </div>
 
         {/* Dashboards */}
-        <div className="max-w-4xl mx-auto space-y-8 mb-16">
-          {dashboards.map((d) => (
+        <div className="max-w-4xl mx-auto space-y-6 mb-12">
+          {dashboards.map((d, i) => (
+            <AnimateIn key={d.label} from="bottom" delay={i * 120}>
             <div
-              key={d.label}
-              className={`rounded-xl border overflow-hidden transition-colors ${
+              className={`rounded-2xl border overflow-hidden transition-all ${
                 d.highlight
-                  ? "border-emerald-500/30 shadow-[0_0_30px_rgba(16,185,129,0.1)]"
-                  : "border-white/10 hover:border-emerald-500/50"
+                  ? "border-emerald-500/40 shadow-[0_0_40px_rgba(16,185,129,0.1)]"
+                  : "border-white/8 hover:border-emerald-500/30"
               } bg-white/5`}
             >
               <div className="relative">
-                <div
-                  className={`absolute top-4 left-4 font-bold px-4 py-1.5 rounded-lg text-sm z-10 ${
-                    d.highlight
-                      ? "bg-emerald-500 text-black shadow-lg"
-                      : "bg-white/20 text-white backdrop-blur-md"
-                  }`}
-                >
+                <div className={`absolute top-4 left-4 font-bold px-4 py-1.5 rounded-lg text-sm z-10 ${
+                  d.highlight ? "bg-emerald-500 text-black" : "bg-white/15 text-white backdrop-blur-md"
+                }`}>
                   {d.label}
                 </div>
                 <Image
@@ -92,105 +94,42 @@ export default function Results() {
                   sizes="(max-width: 1024px) 100vw, 800px"
                 />
               </div>
-              <div
-                className={`p-5 bg-black border-t flex items-center justify-between ${
-                  d.highlight ? "border-emerald-500/20" : "border-white/10"
-                }`}
-              >
-                <p className="text-gray-400 text-sm">
-                  Vendas Brutas — {d.period}
-                </p>
-                <p className="text-2xl font-extrabold text-emerald-400">
-                  {d.value}
-                </p>
+              <div className={`p-5 bg-black border-t flex items-center justify-between ${
+                d.highlight ? "border-emerald-500/20" : "border-white/5"
+              }`}>
+                <p className="text-gray-500 text-sm">UrbanFeet · {d.period} · {d.label}</p>
+                <p className="text-2xl font-extrabold text-emerald-400">{d.value}</p>
               </div>
             </div>
+            </AnimateIn>
           ))}
-
-          <div className="bg-emerald-900/20 border border-emerald-500/40 rounded-2xl p-6 text-center">
-            <p className="text-gray-400 text-sm mb-2">
-              Faturamento da UrbanFeet no{" "}
-              <strong className="text-white">3º mês</strong>
-            </p>
-            <p className="text-4xl md:text-5xl font-extrabold text-emerald-400">
-              R$ 37.705,24
-            </p>
-            <p className="text-gray-500 text-sm mt-3">
-              Dropshipping nacional — sem estoque, sem tocar em caixas, sem
-              funcionários.
-            </p>
-          </div>
         </div>
 
-        <p className="text-center text-gray-500 text-sm mb-16">
-          *Resultados reais da loja UrbanFeet. O seu resultado depende da sua
-          dedicação em aplicar o método.
+        {/* Destaque */}
+        <div className="bg-emerald-900/20 border border-emerald-500/40 rounded-2xl p-6 md:p-8 text-center mb-6">
+          <p className="text-gray-400 text-sm mb-2">
+            UrbanFeet — Dropshipping Nacional de Calçados · <strong className="text-white">2º semestre de 2025</strong>
+          </p>
+          <p className="font-bebas text-[clamp(48px,7vw,80px)] text-emerald-400 leading-none">
+            R$ 37.705,24
+          </p>
+          <p className="text-gray-400 text-sm mt-3 max-w-lg mx-auto">
+            Em 90 dias. Sem estoque. Sem tocar em uma caixa de sapato. O fornecedor brasileiro cuida de tudo — eu só me preocupo em vender.
+          </p>
+        </div>
+
+        <p className="text-center text-gray-600 text-xs mb-10">
+          *Resultados reais da UrbanFeet. Seu resultado depende da sua dedicação em aplicar o método.
         </p>
 
-        {/* Service income section */}
-        <div className="max-w-4xl mx-auto relative rounded-3xl overflow-hidden">
-          <Image
-            src={EDUARDO_TABLET}
-            alt=""
-            aria-hidden="true"
-            fill
-            sizes="(max-width: 1024px) 100vw, 800px"
-            className="object-cover object-center opacity-10 pointer-events-none select-none"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/50 to-black pointer-events-none" />
-
-          <div className="relative z-10 px-6 pt-8 text-center mb-10">
-            <div className="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 px-4 py-2 rounded-full border border-amber-500/20 mb-4">
-              <DollarSign className="w-4 h-4" />
-              <span className="font-bold uppercase tracking-wide text-sm">
-                Negócio 1 — Prestação de Serviços
-              </span>
-            </div>
-            <h3 className="text-2xl md:text-3xl font-extrabold text-white mb-3">
-              Criando Lojas para Clientes:{" "}
-              <span className="text-amber-400">~R$ 5.600/mês</span>
-            </h3>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              Em paralelo à UrbanFeet, crio lojas para empreendedores locais.
-              Uma média de{" "}
-              <strong className="text-white">7 lojas por mês</strong>, cada uma
-              entregue em menos de 3 dias.
-            </p>
-          </div>
-
-          <div className="relative z-10 grid md:grid-cols-3 gap-4 mb-6 px-6">
-            {serviceMonths.map((m, i) => (
-              <div
-                key={m.month}
-                className={`bg-black rounded-xl p-5 text-center hover:border-amber-500/60 transition-colors border ${
-                  i === 1 ? "border-amber-500/40" : "border-amber-500/20"
-                }`}
-              >
-                <p className="text-amber-400 font-bold text-xs uppercase tracking-wider mb-2">
-                  {m.month}
-                </p>
-                <p className="text-2xl font-extrabold text-white mb-1">
-                  {m.value}
-                </p>
-                <p className="text-gray-500 text-sm">{m.sub}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="relative z-10 bg-amber-900/20 border border-amber-500/40 rounded-2xl p-6 text-center mx-6 mb-8">
-            <p className="text-gray-400 text-sm mb-2">
-              Faturamento médio mensal com{" "}
-              <strong className="text-white">prestação de serviços</strong>
-            </p>
-            <p className="text-4xl md:text-5xl font-extrabold text-amber-400">
-              R$ 5.466/mês
-            </p>
-            <p className="text-gray-500 text-sm mt-3">
-              Cobrando R$ 600–R$ 800 por loja — sem precisar de CNPJ, sem
-              escritório, sem funcionários.
-            </p>
-          </div>
+        <div className="max-w-sm mx-auto">
+          <CTAButton href="#oferta">QUERO APRENDER ESSE MÉTODO</CTAButton>
         </div>
+
+        <p className="text-center text-gray-600 text-sm mt-10">
+          Esses são os meus números. Quer ver o que acontece quando aplico o método para um cliente?{" "}
+          <span className="text-white">↓</span>
+        </p>
       </div>
     </section>
   );

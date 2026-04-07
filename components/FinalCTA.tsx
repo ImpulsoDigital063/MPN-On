@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ShieldCheck, Lock, CircleCheck } from "lucide-react";
 import CTAButton from "./CTAButton";
+import AnimateIn from "./AnimateIn";
 
 const EDUARDO_TABLET2 =
   "https://d2xsxph8kpxj0f.cloudfront.net/310519663305937026/Jey4huR4MGMLTE3MYskJ4P/eduardo_tablet2_ecdab08a.jpeg";
@@ -26,6 +27,7 @@ export default function FinalCTA() {
 
       <div className="relative z-10 flex flex-col justify-end min-h-screen pb-16 pt-[60vh]">
         <div className="container max-w-4xl mx-auto text-center px-4">
+          <AnimateIn from="bottom">
           {/* Shield icon */}
           <div className="flex justify-center mb-6">
             <div className="bg-emerald-500/10 p-5 rounded-full border border-emerald-500/20">
@@ -46,10 +48,12 @@ export default function FinalCTA() {
           <p className="text-gray-400 mb-10 max-w-xl mx-auto">
             O risco é todo meu. Você não tem nada a perder.
           </p>
+          </AnimateIn>
 
+          <AnimateIn from="bottom" delay={150}>
           <div className="flex flex-col items-center gap-6">
             <div className="w-full max-w-sm">
-              <CTAButton>QUERO MEU PRIMEIRO NEGÓCIO ONLINE</CTAButton>
+              <CTAButton>GARANTIR MINHA VAGA AGORA</CTAButton>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-400">
               <span className="flex items-center gap-1">
@@ -63,6 +67,7 @@ export default function FinalCTA() {
               </span>
             </div>
           </div>
+          </AnimateIn>
         </div>
       </div>
     </section>

@@ -1,41 +1,51 @@
 import Hero from "@/components/Hero";
+import StickyHeader from "@/components/StickyHeader";
 import VSL from "@/components/VSL";
+import SocialProofBar from "@/components/SocialProofBar";
 import PainPoints from "@/components/PainPoints";
-import Opportunity from "@/components/Opportunity";
+import MediaMention from "@/components/MediaMention";
 import AboutEduardo from "@/components/AboutEduardo";
+import Results from "@/components/Results";
 import CaseStudy from "@/components/CaseStudy";
 import Method from "@/components/Method";
-import Logistics from "@/components/Logistics";
-import BonusTheme from "@/components/BonusTheme";
+import BonusGifts from "@/components/BonusGifts";
 import Curriculum from "@/components/Curriculum";
-import PDFMaterials from "@/components/PDFMaterials";
-import Results from "@/components/Results";
+import BrandStrip from "@/components/BrandStrip";
+import Logistics from "@/components/Logistics";
+import Support from "@/components/Support";
 import Timeline from "@/components/Timeline";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
+import StickyBuyBar from "@/components/StickyBuyBar";
+import SocialProofNotification from "@/components/SocialProofNotification";
 
 export default function Home() {
   return (
     <main>
+      <StickyHeader />
       <Hero />
       <VSL />
+      <SocialProofBar />
       <PainPoints />
-      <Opportunity />
+      <MediaMention />
       <AboutEduardo />
+      <Results />
       <CaseStudy />
       <Method />
-      <Logistics />
-      <BonusTheme />
+      <BonusGifts />
       <Curriculum />
-      <PDFMaterials />
-      <Results />
+      <BrandStrip />
+      <Logistics />
+      <Support />
       <Timeline />
       <Pricing />
       <FAQ />
       <FinalCTA />
       <Footer />
+      <StickyBuyBar />
+      <SocialProofNotification />
     </main>
   );
 }

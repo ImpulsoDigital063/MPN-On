@@ -1,4 +1,5 @@
 import Image from "next/image";
+import AnimateIn from "./AnimateIn";
 
 const PIX_PROOF =
   "https://d2xsxph8kpxj0f.cloudfront.net/310519663305937026/Jey4huR4MGMLTE3MYskJ4P/WhatsAppImage2026-03-05at20.43.53_14147517.jpeg";
@@ -9,16 +10,22 @@ export default function CaseStudy() {
       <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-500/6 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="container max-w-4xl mx-auto relative z-10 px-4">
-        <div className="text-center mb-12">
-          <p className="text-emerald-400 font-bold uppercase tracking-widest text-sm mb-4">
-            Caso Real
-          </p>
-          <h2 className="text-3xl md:text-5xl font-extrabold mb-0">
-            Esse é o método{" "}
-            <span className="text-emerald-400">na prática.</span>
-          </h2>
-        </div>
+        <AnimateIn from="bottom">
+          <div className="text-center mb-12">
+            <p className="text-emerald-400 font-bold uppercase tracking-widest text-sm mb-4">
+              Módulo 2 · Caso Real Gravado
+            </p>
+            <h2 className="text-3xl md:text-5xl font-extrabold mb-3">
+              Esse é o método{" "}
+              <span className="text-emerald-400">na prática.</span>
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              Todas as 29 aulas do Módulo 2 foram gravadas criando essa loja real — do zero à entrega. Você acompanha cada decisão, cada clique, cada configuração.
+            </p>
+          </div>
+        </AnimateIn>
 
+        <AnimateIn from="bottom" delay={100}>
         <div className="space-y-5 text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto mb-14">
           <p>
             O <strong className="text-white">Gabriel</strong> é dono da{" "}
@@ -28,9 +35,9 @@ export default function CaseStudy() {
             deixando dinheiro na mesa.
           </p>
           <p>
-            Eu criei a loja dele do zero. Desenvolvi uma nova logo, fiz um
-            rebranding completo, integrei todos os mecanismos de pagamento e
-            frete — e gravei cada passo.
+            Eu criei a loja dele do zero ao vivo — nova logo, rebranding completo, todos os mecanismos de pagamento e frete configurados.{" "}
+            <strong className="text-white">Cada passo foi gravado e virou aula.</strong>{" "}
+            É exatamente o que você vai assistir no Módulo 2.
           </p>
           <p>
             Hoje o Gabriel oferece{" "}
@@ -41,16 +48,10 @@ export default function CaseStudy() {
             até 80% mais baratos do que levaria direto nos Correios. Tudo
             funcionando desde o primeiro dia.
           </p>
-          <p className="text-white font-medium">
-            São exatamente essas{" "}
-            <strong className="text-emerald-400">29 aulas</strong> que você vai
-            assistir no Módulo 2.
-          </p>
           <p>
-            Você vai ver cada clique, cada configuração, cada decisão — e vai
-            replicar o mesmo processo para qualquer negócio. Suplementos, roupas,
-            joias, pet shop, moda fitness, artesanato — o nicho muda, o método é
-            o mesmo.
+            O nicho aqui é suplementos — mas ao longo das aulas você vai perceber que{" "}
+            <strong className="text-white">o método funciona para qualquer negócio</strong>.
+            Roupas, joias, pet shop, moda fitness, artesanato, cosméticos — o nicho muda, o processo é o mesmo. Você vai ver isso na prática durante o curso.
           </p>
           <p>
             No final, o Gabriel pagou{" "}
@@ -58,8 +59,10 @@ export default function CaseStudy() {
             uma loja criada em menos de uma semana.
           </p>
         </div>
+        </AnimateIn>
 
         {/* Gabriel video testimonial */}
+        <AnimateIn from="left" delay={80}>
         <div className="w-full max-w-xs mx-auto mb-8">
           <p className="text-center text-gray-400 text-sm mb-4 uppercase tracking-widest font-bold">
             Depoimento do Gabriel
@@ -78,8 +81,10 @@ export default function CaseStudy() {
             />
           </div>
         </div>
+        </AnimateIn>
 
         {/* Pix proof */}
+        <AnimateIn from="right" delay={80}>
         <div className="w-full max-w-sm mx-auto mb-12">
           <p className="text-center text-gray-400 text-sm mb-4 uppercase tracking-widest font-bold">
             Comprovante de Pagamento
@@ -96,8 +101,10 @@ export default function CaseStudy() {
             />
           </div>
         </div>
+        </AnimateIn>
 
         {/* Summary */}
+        <AnimateIn from="bottom" delay={100}>
         <div className="text-center">
           <div className="inline-block bg-emerald-500/10 border border-emerald-500/30 rounded-2xl px-8 py-6 mb-6">
             <p className="text-2xl md:text-3xl font-extrabold text-white leading-snug">
@@ -109,7 +116,11 @@ export default function CaseStudy() {
             Agora imagina fazer isso{" "}
             <strong className="text-white">7 vezes por mês.</strong>
           </p>
+          <p className="text-gray-500 text-base mt-4">
+            É exatamente isso que o método ensina. Veja o que está dentro.
+          </p>
         </div>
+        </AnimateIn>
       </div>
     </section>
   );
