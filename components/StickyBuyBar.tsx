@@ -30,7 +30,7 @@ export default function StickyBuyBar() {
               <p className="text-emerald-400 font-extrabold text-lg leading-none">
                 R$ 297
               </p>
-              <p className="text-gray-500 text-xs">ou 3x de R$105</p>
+              <p className="text-gray-500 text-xs">ou 3x de R$105 no cartão</p>
             </div>
             <a
               href={KIWIFY_URL}

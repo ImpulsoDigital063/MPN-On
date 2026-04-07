@@ -136,7 +136,8 @@ export default function BonusGifts() {
           <div className="text-center md:text-right">
             <p className="text-gray-400 text-sm mb-1">Você leva tudo por</p>
             <p className="font-bebas text-[clamp(48px,6vw,72px)] text-emerald-400 leading-none">R$297</p>
-            <p className="text-gray-500 text-sm">ou 3x de R$105</p>
+            <p className="text-gray-400 text-sm font-medium">no Pix</p>
+            <p className="text-gray-500 text-sm">ou 3x de R$105 no cartão</p>
           </div>
         </div>
 

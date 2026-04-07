@@ -69,7 +69,8 @@ export default function Pricing() {
               <div className="relative bg-emerald-500/8 border border-emerald-500/25 rounded-2xl px-10 py-6">
                 <p className="text-gray-400 text-sm mb-1">No lançamento, você leva tudo por:</p>
                 <p className="font-bebas text-[clamp(56px,8vw,88px)] text-emerald-400 leading-none">R$ 297</p>
-                <p className="text-gray-500 text-sm mt-1">ou 3x de R$ 99,00 no cartão</p>
+                <p className="text-white text-sm font-medium mt-0.5">no Pix</p>
+                <p className="text-gray-500 text-sm">ou 3x de R$ 105,00 no cartão</p>
               </div>
             </div>
 

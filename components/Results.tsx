@@ -1,5 +1,4 @@
 import Image from "next/image";
-import CTAButton from "./CTAButton";
 import AnimateIn from "./AnimateIn";
 
 const DASH_30 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663305937026/Jey4huR4MGMLTE3MYskJ4P/dashboard_30dias_v2_3658aeac.png";
@@ -164,8 +163,8 @@ export default function Results() {
         </div>
         </AnimateIn>
 
-        <div className="max-w-sm mx-auto">
-          <CTAButton href="#oferta">QUERO APRENDER ESSE MÉTODO</CTAButton>
+        <div className="text-center">
+          <p className="text-gray-500 text-sm">Continue para ver o método completo. ↓</p>
         </div>
       </div>
     </section>

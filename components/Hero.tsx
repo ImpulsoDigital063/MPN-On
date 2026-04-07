@@ -241,10 +241,12 @@ export default function Hero() {
               {copy.reforco}
             </p>
 
-            <div className="flex items-baseline gap-2">
-              <span className="text-gray-500 text-xs">Tudo por</span>
-              <span className="text-xl font-extrabold text-white">R$297</span>
-              <span className="text-gray-600 text-xs">ou 3x de R$105</span>
+            <div className="flex flex-col gap-0.5">
+              <div className="flex items-baseline gap-2">
+                <span className="text-xl font-extrabold text-white">R$297</span>
+                <span className="text-gray-400 text-xs font-medium">no Pix</span>
+              </div>
+              <span className="text-gray-600 text-xs">ou 3x de R$105 no cartão</span>
             </div>
             <CTAButton href="#oferta">{copy.cta}</CTAButton>
             <TrustBadges />
@@ -339,10 +341,12 @@ export default function Hero() {
           </p>
 
           {/* Price */}
-          <div className="flex items-baseline gap-2 mb-5">
-            <span className="text-gray-500 text-sm">Tudo por</span>
-            <span className="text-3xl font-extrabold text-white">R$297</span>
-            <span className="text-gray-600 text-sm">ou 3x de R$105</span>
+          <div className="flex flex-col gap-0.5 mb-5">
+            <div className="flex items-baseline gap-2">
+              <span className="text-3xl font-extrabold text-white">R$297</span>
+              <span className="text-gray-400 text-sm font-medium">no Pix</span>
+            </div>
+            <span className="text-gray-600 text-sm">ou 3x de R$105 no cartão</span>
           </div>
 
           <div className="flex flex-col gap-3 w-full max-w-sm">

@@ -1,5 +1,4 @@
 import { TrendingUp, ShoppingBag, Package } from "lucide-react";
-import CTAButton from "./CTAButton";
 
 const ecommerceStats = [
   { value: "R$ 235 bi", label: "Faturamento E-commerce Brasil", sub: "em 2025 (crescimento de 15,3%)", source: "Fonte: ABComm" },
@@ -95,7 +94,7 @@ export default function Opportunity() {
               <div>
                 <h4 className="text-lg font-bold text-white mb-3">Por que isso importa para você?</h4>
                 <p className="text-gray-300 leading-relaxed text-sm">
-                  Milhões de negócios locais no Brasil <strong className="text-white">ainda não têm loja online</strong>. Eles precisam de alguém que crie para eles. A Shopify oferece 3 meses por apenas $1/mês, tornando o investimento inicial quase zero.{" "}
+                  Milhões de negócios no Brasil <strong className="text-white">ainda não têm loja online</strong>. Todos eles são clientes em potencial. A Shopify dá 3 meses por $1 — você basicamente começa sem precisar investir nada.{" "}
                   <strong className="text-emerald-400">Você pode ser essa pessoa.</strong>
                 </p>
               </div>
@@ -119,11 +118,11 @@ export default function Opportunity() {
             </div>
             <div>
               <h3 className="text-xl font-bold text-white">
-                E tem mais…{" "}
-                <span className="text-amber-400">Um Bônus que Ninguém Esperava</span>
+                E tem mais:{" "}
+                <span className="text-amber-400">você também monta sua própria loja</span>
               </h3>
               <p className="text-sm text-gray-400">
-                Além de criar lojas para clientes, você também vai ter a <strong>sua própria loja</strong> gerando renda passiva
+                Além de criar lojas pra clientes, você aprende a ter um <strong>e-commerce seu</strong> rodando em paralelo
               </p>
             </div>
           </div>
@@ -136,9 +135,9 @@ export default function Opportunity() {
                   <span className="text-amber-400">R$ 81,5 bilhões por ano</span>
                 </h4>
                 <p className="text-gray-300 leading-relaxed text-sm">
-                  Com dropshipping nacional, você vende sem estoque, sem tocar em caixas. O fornecedor cuida de tudo.{" "}
-                  <strong className="text-amber-400">Você só precisa vender.</strong> E eu já provei que funciona: 1.600+ pares vendidos com a UrbanFeet — e você vai aprender exatamente como no{" "}
-                  <strong className="text-white">Módulo Bônus</strong>.
+                  Com dropshipping nacional, você vende sem estoque e sem tocar em produto. O fornecedor embala e envia.{" "}
+                  <strong className="text-amber-400">Você só cuida de vender.</strong> É o modelo exato que a UrbanFeet usa há 3 anos — e você aprende do zero no{" "}
+                  <strong className="text-white">módulo bônus</strong>.
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-4">
@@ -153,24 +152,10 @@ export default function Opportunity() {
           </div>
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <p className="text-lg text-emerald-400 font-semibold mb-8 max-w-2xl mx-auto">
-            Isso significa uma coisa: milhares de negócios estão precisando de alguém que faça isso por eles.
-          </p>
-          <div className="mb-8 space-y-1 max-w-xl mx-auto">
-            <p className="text-xl md:text-2xl font-bold text-white">
-              A oportunidade já está aí.
-            </p>
-            <p className="text-gray-400 text-lg">A diferença é simples:</p>
-            <p className="text-gray-500">ou você continua assistindo…</p>
-            <p className="text-white font-semibold">
-              ou aprende um caminho pra entrar nesse mercado.
-            </p>
-          </div>
-          <div className="max-w-sm mx-auto">
-            <CTAButton>QUERO FAZER PARTE DESSES NÚMEROS</CTAButton>
-          </div>
+        {/* Closing transition */}
+        <div className="text-center mt-16 space-y-1">
+          <p className="text-gray-400 text-lg">Agora que você viu o tamanho da oportunidade…</p>
+          <p className="text-white font-semibold">veja como o método funciona na prática. ↓</p>
         </div>
       </div>
     </section>

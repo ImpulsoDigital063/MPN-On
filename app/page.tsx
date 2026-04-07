@@ -5,6 +5,7 @@ import SocialProofBar from "@/components/SocialProofBar";
 import PainPoints from "@/components/PainPoints";
 import MediaMention from "@/components/MediaMention";
 import AboutEduardo from "@/components/AboutEduardo";
+import Opportunity from "@/components/Opportunity";
 import Results from "@/components/Results";
 import CaseStudy from "@/components/CaseStudy";
 import Method from "@/components/Method";
@@ -33,6 +34,7 @@ export default function Home() {
       <MediaMention />
       <AboutEduardo />
       <CaseStudy />
+      <Opportunity />
       <Results />
       <Method />
       <BonusGifts />
