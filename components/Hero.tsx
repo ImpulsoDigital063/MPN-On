@@ -7,6 +7,30 @@ const LOGO =
 const EDUARDO =
   "https://d2xsxph8kpxj0f.cloudfront.net/310519663305937026/Jey4huR4MGMLTE3MYskJ4P/eduardo_hero_left_nobg_9a391c6c.png";
 
+// ─── A/B Test ──────────────────────────────────────────────────────────────
+// Altere para 'B' para ativar a variação B
+const HERO_VARIANT: 'A' | 'B' = 'A'
+
+const heroVariants = {
+  A: {
+    headline:   'Como sair do zero e ganhar até R$1.500 criando lojas simples para negócios locais',
+    subheadline:'Mesmo sem experiência, sem aparecer e sem saber programar.',
+    prova:      'Uma loja. Menos de 7 dias. Primeiro pagamento no Pix.',
+    reforco:    'Você só precisa de 1 cliente pra recuperar seu investimento.',
+    cta:        '👉 Quero ver como funciona',
+  },
+  B: {
+    headline:   'Como sair do zero e ganhar até R$1.500 criando lojas simples para negócios locais',
+    subheadline:'Mesmo que hoje você não saiba nada — eu te mostro exatamente o que fazer, do início ao primeiro cliente.',
+    prova:      'Uma loja. Menos de 7 dias. Primeiro pagamento no Pix.',
+    reforco:    'Você não precisa saber fazer — só seguir o passo a passo.',
+    cta:        '👉 Quero ver como funciona',
+  },
+} as const
+
+const copy = heroVariants[HERO_VARIANT]
+// ───────────────────────────────────────────────────────────────────────────
+
 const tickerItems = [
   "R$37.705 em 90 dias",
   "1.600+ pares vendidos",
@@ -205,14 +229,16 @@ export default function Hero() {
           {/* Conteúdo — sobe sobre o fade */}
           <div className="relative z-10 bg-[#050505] px-5 pt-4 pb-8 flex flex-col gap-3 -mt-24">
             <p className="text-base text-gray-300 leading-relaxed">
-              Crie lojas Shopify para negócios locais e cobre{" "}
-              <strong className="text-white">R$600 a R$1.500 por projeto</strong>.
-              Monte também seu próprio e-commerce com dropshipping nacional.
+              {copy.headline}
             </p>
-
-            <p className="text-sm text-gray-500 leading-relaxed">
-              Sem seguidores. Sem tráfego pago. Sem programar.{" "}
-              <span className="text-emerald-400 font-semibold">Só o método.</span>
+            <p className="text-sm text-gray-400 leading-relaxed">
+              {copy.subheadline}
+            </p>
+            <p className="text-sm font-bold text-emerald-400">
+              {copy.prova}
+            </p>
+            <p className="text-xs text-gray-500">
+              {copy.reforco}
             </p>
 
             <div className="flex items-baseline gap-2">
@@ -220,7 +246,7 @@ export default function Hero() {
               <span className="text-xl font-extrabold text-white">R$297</span>
               <span className="text-gray-600 text-xs">ou 3x de R$105</span>
             </div>
-            <CTAButton href="#oferta">QUERO MEU PRIMEIRO NEGÓCIO ONLINE</CTAButton>
+            <CTAButton href="#oferta">{copy.cta}</CTAButton>
             <TrustBadges />
             <p className="text-gray-600 text-xs border-t border-white/5 pt-3">
               ↓ Como um e-commerce sem estoque faturou R$37k em 90 dias? Continue lendo.
@@ -299,15 +325,17 @@ export default function Hero() {
             </h2>
           </div>
 
-          <p className="text-base text-gray-300 leading-relaxed max-w-lg mb-2">
-            Todo empreendedor que vende pelo Instagram ou WhatsApp precisa de uma loja
-            online. Eles só não sabem como fazer — e não têm R$2.000 pra pagar agência.{" "}
-            <strong className="text-white">É aí que você entra.</strong>
+          <p className="text-base text-gray-300 leading-relaxed max-w-lg mb-1">
+            {copy.headline}
           </p>
-
-          <p className="text-sm font-bold text-emerald-400 max-w-md mb-5">
-            Dois negócios dentro de um curso. Feito por quem abre agência, não por quem
-            ensina teoria.
+          <p className="text-sm text-gray-400 max-w-md mb-1">
+            {copy.subheadline}
+          </p>
+          <p className="text-sm font-bold text-emerald-400 max-w-md mb-1">
+            {copy.prova}
+          </p>
+          <p className="text-xs text-gray-500 max-w-md mb-5">
+            {copy.reforco}
           </p>
 
           {/* Price */}
@@ -318,7 +346,7 @@ export default function Hero() {
           </div>
 
           <div className="flex flex-col gap-3 w-full max-w-sm">
-            <CTAButton href="#oferta">QUERO MEU PRIMEIRO NEGÓCIO ONLINE</CTAButton>
+            <CTAButton href="#oferta">{copy.cta}</CTAButton>
             <TrustBadges />
             <p className="text-gray-600 text-xs border-t border-white/5 pt-2">
               ↓ Como um e-commerce sem estoque faturou R$37k em 90 dias? Continue lendo.
