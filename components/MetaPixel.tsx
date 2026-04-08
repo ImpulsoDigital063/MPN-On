@@ -25,24 +25,35 @@ export type VideoThreshold = 25 | 50 | 75 | 100
 const firedInMemory = new Set<string>()
 const SESSION_KEY = 'mpn_pixel_fired'
 
-function fireOnce(event: string): void {
-  if (firedInMemory.has(event)) return
+function dedupCheck(key: string): boolean {
+  if (firedInMemory.has(key)) return true
 
   try {
     const raw = sessionStorage.getItem(SESSION_KEY)
     const persisted: string[] = raw ? JSON.parse(raw) : []
-    if (persisted.includes(event)) {
-      firedInMemory.add(event)
-      return
+    if (persisted.includes(key)) {
+      firedInMemory.add(key)
+      return true
     }
-    persisted.push(event)
+    persisted.push(key)
     sessionStorage.setItem(SESSION_KEY, JSON.stringify(persisted))
   } catch {
     // sessionStorage indisponível (modo privado restrito) — continua sem dedup persistente
   }
 
-  firedInMemory.add(event)
+  firedInMemory.add(key)
+  return false
+}
+
+function fireOnce(event: string): void {
+  if (dedupCheck(event)) return
   window.fbq?.('trackCustom', event)
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function fireOnceStandard(key: string, eventName: string, params: Record<string, any>): void {
+  if (dedupCheck(key)) return
+  window.fbq?.('track', eventName, params)
 }
 
 // ─── Hook: tempo na página com Page Visibility API ───────────────────────────
@@ -57,9 +68,9 @@ function usePageTimeTracking(): void {
       document.visibilityState === 'visible' ? Date.now() : null
 
     const MILESTONES = [
-      { ms: 30_000, event: 'Tempo_30s' },
-      { ms: 60_000, event: 'Tempo_60s' },
-      { ms: 120_000, event: 'Tempo_120s' },
+      { ms: 30_000, event: 'Tempo_30s', duration: 30 },
+      { ms: 60_000, event: 'Tempo_60s', duration: 60 },
+      { ms: 120_000, event: 'Tempo_120s', duration: 120 },
     ]
 
     function getElapsed(): number {
@@ -70,8 +81,17 @@ function usePageTimeTracking(): void {
 
     function checkMilestones(): void {
       const elapsed = getElapsed()
-      for (const { ms, event } of MILESTONES) {
-        if (elapsed >= ms) fireOnce(event)
+      for (const { ms, event, duration } of MILESTONES) {
+        if (elapsed >= ms) {
+          fireOnce(event)
+          fireOnceStandard(`vc_${event}`, 'ViewContent', {
+            content_name: 'MPN-On Pagina',
+            value: 297.00,
+            currency: 'BRL',
+            source: 'time',
+            duration,
+          })
+        }
       }
     }
 
@@ -124,6 +144,13 @@ function useVideoTracking(): void {
           if (pct >= threshold && !fired.has(threshold)) {
             fired.add(threshold)
             window.fbq?.('trackCustom', `Video_${threshold}`)
+            window.fbq?.('track', 'ViewContent', {
+              content_name: 'MPN-On VSL',
+              value: 297.00,
+              currency: 'BRL',
+              source: 'video',
+              duration: threshold,
+            })
           }
         }
       })
@@ -151,6 +178,40 @@ function useVideoTracking(): void {
   }, [])
 }
 
+// ─── Hook: scroll depth ──────────────────────────────────────────────────────
+//
+// Dispara ViewContent com scroll_depth quando o usuário atinge 25/50/75/100%
+// da página. Uma vez por threshold por sessão via dedupCheck.
+
+const SCROLL_THRESHOLDS = [25, 50, 75, 100] as const
+
+function useScrollDepth(): void {
+  useEffect(() => {
+    function onScroll(): void {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop
+      const docHeight =
+        document.documentElement.scrollHeight - document.documentElement.clientHeight
+      if (docHeight <= 0) return
+      const pct = Math.round((scrollTop / docHeight) * 100)
+
+      for (const threshold of SCROLL_THRESHOLDS) {
+        if (pct >= threshold) {
+          fireOnceStandard(`scroll_${threshold}`, 'ViewContent', {
+            content_name: 'MPN-On Pagina',
+            value: 297.00,
+            currency: 'BRL',
+            source: 'scroll',
+            scroll_depth: threshold,
+          })
+        }
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+}
+
 // ─── Hook: rastreamento de cliques em CTAs ───────────────────────────────────
 //
 // Event delegation: escuta click e touchstart no document.
@@ -173,8 +234,19 @@ function useCTATracking(): void {
       lastFired.set(target, now)
 
       const trackType = (target as HTMLElement).dataset.track
-      if (trackType === 'cta') window.fbq?.('trackCustom', 'Click_CTA')
-      else if (trackType === 'scroll') window.fbq?.('trackCustom', 'Scroll_CTA')
+      if (trackType === 'cta') {
+        window.fbq?.('trackCustom', 'Click_CTA')
+        window.fbq?.('track', 'AddToCart', {
+          content_name: 'MPN-On Curso',
+          value: 297.00,
+          currency: 'BRL',
+        })
+        window.fbq?.('track', 'InitiateCheckout', {
+          content_name: 'MPN-On Curso',
+          value: 297.00,
+          currency: 'BRL',
+        })
+      } else if (trackType === 'scroll') window.fbq?.('trackCustom', 'Scroll_CTA')
     }
 
     document.addEventListener('click', onInteraction)
@@ -206,6 +278,7 @@ export function trackVideo(percent: VideoThreshold): void {
 export default function MetaPixel() {
   usePageTimeTracking()
   useVideoTracking()
+  useScrollDepth()
   useCTATracking()
 
   return (

@@ -1,9 +1,7 @@
 import Hero from "@/components/Hero";
 import StickyHeader from "@/components/StickyHeader";
 import VSL from "@/components/VSL";
-import SocialProofBar from "@/components/SocialProofBar";
 import PainPoints from "@/components/PainPoints";
-import MediaMention from "@/components/MediaMention";
 import AboutEduardo from "@/components/AboutEduardo";
 import Opportunity from "@/components/Opportunity";
 import Results from "@/components/Results";
@@ -29,12 +27,10 @@ export default function Home() {
       <StickyHeader />
       <Hero />
       <VSL />
-      <SocialProofBar />
+      <Opportunity />
       <PainPoints />
-      <MediaMention />
       <AboutEduardo />
       <CaseStudy />
-      <Opportunity />
       <Results />
       <Method />
       <BonusGifts />
