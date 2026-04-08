@@ -39,6 +39,30 @@ export default function Results() {
         </div>
         </AnimateIn>
 
+        {/* Dados do mercado de calçados */}
+        <div className="max-w-4xl mx-auto mb-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            {[
+              { value: "R$ 81 bi", label: "mercado de calçados Brasil", highlight: false },
+              { value: "19,7%", label: "crescimento anual do dropshipping", highlight: false },
+              { value: "0", label: "estoque necessário", highlight: true },
+              { value: "1.600+", label: "pares vendidos (UrbanFeet)", highlight: true },
+            ].map((s) => (
+              <div key={s.label} className="bg-black border border-emerald-500/20 rounded-2xl p-5 text-center">
+                <p className={`text-3xl md:text-4xl font-extrabold mb-1 ${s.highlight ? "text-white" : "text-emerald-400"}`}>{s.value}</p>
+                <p className="text-xs text-gray-400 mt-1">{s.label}</p>
+              </div>
+            ))}
+          </div>
+          <div className="bg-gradient-to-r from-emerald-950/30 to-black border border-emerald-500/20 rounded-2xl p-5 md:p-6">
+            <p className="text-gray-300 text-sm leading-relaxed">
+              O mercado de calçados no Brasil movimenta{" "}
+              <strong className="text-emerald-400">R$ 81,5 bilhões por ano</strong> — e com dropshipping nacional você vende sem estoque e sem tocar em produto.{" "}
+              <strong className="text-white">O fornecedor embala e envia. Você só cuida de vender.</strong>
+            </p>
+          </div>
+        </div>
+
         <p className="text-center text-gray-600 text-sm mb-6 italic">
           Screenshots reais do painel da UrbanFeet — sem edição, sem filtro.
         </p>

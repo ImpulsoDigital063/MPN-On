@@ -145,6 +145,11 @@ export default function CaseStudy() {
           </div>
         </div>
         </AnimateIn>
+
+        <div className="text-center mt-16 space-y-1">
+          <p className="text-gray-400 text-lg">Agora que você viu o tamanho da oportunidade de prestar serviço…</p>
+          <p className="text-white font-semibold">veja como o método funciona na prática. ↓</p>
+        </div>
       </div>
     </section>
   );

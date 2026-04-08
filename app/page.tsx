@@ -6,6 +6,7 @@ import AboutEduardo from "@/components/AboutEduardo";
 import Opportunity from "@/components/Opportunity";
 import Results from "@/components/Results";
 import CaseStudy from "@/components/CaseStudy";
+import OpportunityBonus from "@/components/OpportunityBonus";
 import Method from "@/components/Method";
 import BonusGifts from "@/components/BonusGifts";
 import Curriculum from "@/components/Curriculum";
@@ -31,6 +32,7 @@ export default function Home() {
       <PainPoints />
       <AboutEduardo />
       <CaseStudy />
+      <OpportunityBonus />
       <Results />
       <Method />
       <BonusGifts />
