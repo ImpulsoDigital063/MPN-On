@@ -132,6 +132,12 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         {children}
         <MetaPixel />
+        <Script
+          src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+          data-utmify-prevent-xcod-sck=""
+          data-utmify-prevent-subids=""
+          strategy="afterInteractive"
+        />
         {GA_ID && (
           <>
             <Script
